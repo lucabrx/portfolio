@@ -7,7 +7,6 @@ import Button from './Button';
 import { Menu, X } from 'lucide-react';
 import ShouldRender from './ShouldRender';
 import { motion } from 'framer-motion';
-import IconContainer from './IconContainer';
 import { Facebook, Github, Instagram, Send } from 'lucide-react';
 
 interface HeaderProps {
@@ -44,7 +43,7 @@ setIsOpen(!isOpen)
 }
 
   return (
-<header className={`fixed top-0 left-0 w-full  ${isOpen ? "bg-background" : "backdrop-blur-[12px] border-transparent-white border-b"}`}> 
+<header className={`fixed top-0 left-0 w-full z-20  ${isOpen ? "bg-background" : "backdrop-blur-[12px] bg-transparent border-transparent-white border-b"}`}> 
 <Container className="flex py-2 h-[56px] items-center justify-between">
 <Link className='flex items-center' href='/'>
   <Image src='/logo.svg' alt='logo' width={32} height={32} />
