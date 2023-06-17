@@ -12,13 +12,13 @@ export default function Home() {
     <Container className='pb-[1000px]'>
        <Hero className='w-full md:mt-4 flex flex-col justify-center items-center '>
 
-          <HeroTitle className='mt-3 lg:mt-22 lpc:mt-24 mb-1 animate-fade-in opacity-0 translate-y-[-100px]'>Hey, I'm <span className='text-transparent bg-clip-text bg-title-gradient '>Luka Brkovic</span>  <br/>
+          <HeroTitle className='mt-3 lg:mt-22 lpc:mt-24 mb-1 animate-fade-in opacity-0 translate-y-[-100px]'>Hey, I&apos;m <span className='text-transparent bg-clip-text bg-title-gradient '>Luka Brkovic</span>  <br/>
           <span className='hidden sms:block'>a self tought web developer</span>
           <span className='sms:hidden'>web developer</span>
           </HeroTitle>
 
-          <HeroSubtitle className='sms:mt-4 animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0 translate-y-[-100px]'>Feel free to explore my portfolio, where you'll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>
-          I'm always excited to take on new challenges.
+          <HeroSubtitle className='sms:mt-4 animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0 translate-y-[-100px]'>Feel free to explore my portfolio, where you&apos;ll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>
+          I&apos;m always excited to take on new challenges.
           </span>
           </HeroSubtitle>
 

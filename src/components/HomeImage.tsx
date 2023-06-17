@@ -1,4 +1,5 @@
 "use client"
+// @ts-ignore
 import { useState, type FC, CSSProperties, useEffect, useRef } from 'react';
 import {useInView} from 'react-intersection-observer'
 interface HomeImageProps {
@@ -74,7 +75,7 @@ ${inView ? "before:animate-image-glow" : ""}
               className={`
                 absolute top-0 block h-[1px] w-[1px] bg-glow-lines
                 ${line.direction === "to left" ?
-                  "left-0 h-[1px] w-10 animate-glow-line-horizontal md:w-16" : ""}
+                  "left-0 h-[1px] w-10 animate-glow-line-horizontal md:w-15" : ""}
                 ${line.direction === "to top" &&
                   "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px]"}
               `}
@@ -98,7 +99,7 @@ ${inView ? "before:animate-image-glow" : ""}
     <path pathLength="1" d="M538 777L538 128"></path>
 </svg>
 
-
+{/* @ts-ignore */}
 <img className={`relative rounded-md z-10  transition-opacity delay-[650ms]
 ${inView ? "opacity-100" : "opacity-0"}
 `}  src="/hero.png" alt='hero image' />
