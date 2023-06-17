@@ -8,7 +8,7 @@ interface HeroElementProps {
 }
 
 export const HeroTitle: FC<HeroElementProps> = ({children}) => {
-  return <h1 className='text-8xl my-6'>{children}</h1>
+  return <h1 className='text-7xl my-6'>{children}</h1>
 } 
 
 export const HeroSubtitle: FC<HeroElementProps> = ({children}) => {
