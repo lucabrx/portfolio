@@ -7,6 +7,9 @@ import Button from './Button';
 import { Menu, X } from 'lucide-react';
 import ShouldRender from './ShouldRender';
 import { motion } from 'framer-motion';
+import IconContainer from './IconContainer';
+import { Facebook, Github, Instagram, Send } from 'lucide-react';
+
 interface HeaderProps {
   
 }
@@ -15,6 +18,13 @@ const navigation = [
   { name: 'About', href: '/' },
   { name: 'Projects', href: '/' },
   { name: 'Contact', href: '/' },
+]
+
+const socials = [
+  { name: 'Facebook', href: '/', icon: <Facebook size="20" /> },
+  { name: 'Github', href: '/', icon: <Github size="20" /> },
+  { name: 'Instagram', href: '/', icon: <Instagram size="20" /> },
+  { name: 'Email', href: '/', icon: <Send size="20" /> },
 ]
 
 const Navbar: FC<HeaderProps> = ({}) => {
@@ -53,7 +63,15 @@ setIsOpen(!isOpen)
 
 <div className='flex justify-center items-center gap-2'>
 
-<Button href='/' size="md" > Contact</Button>
+<div className="hidden md:flex space-x-2 text-off-white">
+          {
+            socials.map(({name, href, icon}, i) => (
+              <Button variant="secondary" size="icon_sm"  key={i}>
+                {icon}
+              </Button>
+            ))
+          }
+        </div>
 
 <button onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
 {isOpen?  <X className='w-8 h-8' /> : <Menu className='w-8 h-8' />}
@@ -65,8 +83,8 @@ setIsOpen(!isOpen)
  animate={{opacity: 1, y: 0}} 
  exit={{opacity: 0, y: 0}} 
  transition={{duration: 0.5}}
-className='fixed top-[64px] w-full h-[calc(100vh-64px)] bg-background inset-x-0'>
-<div className='flex flex-col space-y-2 py-4 z-50'>
+className='absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x-0'>
+<div className='flex flex-col space-y-2 py-4 '>
   {
     navigation.map(({name, href}, i) => (
       <Link onClick={handleClick} href={href} key={i} className='text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark'>

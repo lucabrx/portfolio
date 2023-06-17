@@ -1,10 +1,6 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import Container from '@/components/Container'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -24,10 +20,10 @@ export default function RootLayout({
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
-      <body className={inter.className}>
+      <body className='bg-page-gradient'>
       <div>
       <Navbar />
-      <main className="pt-navigation-height">
+      <main className="pt-navigation-height ">
       {children}
       </main>
       <Footer />

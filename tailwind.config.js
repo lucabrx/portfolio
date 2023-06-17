@@ -62,13 +62,27 @@ module.exports = {
           "navigation-height": "var(--navigation-height)",
         },
         backgroundImage: {
-          "primary-gradient":
-            "conic-gradient(at right bottom, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))",
-          "title-gradient":
-         "linear-gradient(to bottom, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))"
+          "primary-gradient": "linear-gradient(to left top, rgb(88, 28, 135), rgb(70, 102, 241))",
+          "title-gradient": "linear-gradient(to bottom, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))",
+          "page-gradient":
+        "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3), transparent)",
+          "hero-gradient": "radial-gradient(ellipse 50% 80% at 20% 40%,rgba(93,52,221,0.1),transparent), radial-gradient(ellipse 50% 80% at 80% 50%,rgba(120,119,198,0.15),transparent)",
         },
         boxShadow: {
           primary: "rgb(147 51 234 / 50%) 0px 1px 40px",
+          
+        },
+        screens: {
+          "xs" : "375px",
+          "ss" : "390px",
+          "sms" : "490px",
+          "sm" : "640px",
+          "md" : "768px",
+          "lg" : "1024px",
+          "xl" : "1280px",
+          "pc" : "1368px",
+          "pc2" : "1400px",
+          "lpc" : "1624px"
         },
   },
   plugins: [],
