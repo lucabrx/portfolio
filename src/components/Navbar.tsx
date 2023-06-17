@@ -12,9 +12,9 @@ interface HeaderProps {
 }
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/' },
+  { name: 'Projects', href: '/' },
+  { name: 'Contact', href: '/' },
 ]
 
 const Navbar: FC<HeaderProps> = ({}) => {
@@ -29,11 +29,15 @@ return () => {
 }
 }, [isOpen]);
 
+function handleClick() {
+setIsOpen(!isOpen)
+}
+
   return (
-<header className={`fixed top-0 left-0 w-full   py-2 ${isOpen ? "bg-background" : "backdrop-blur-[12px] border-transparent-white border-b"}`}> 
-<Container className="flex h-navigation-height items-center justify-between">
+<header className={`fixed top-0 left-0 w-full  ${isOpen ? "bg-background" : "backdrop-blur-[12px] border-transparent-white border-b"}`}> 
+<Container className="flex py-2 h-[56px] items-center justify-between">
 <Link className='flex items-center' href='/'>
-  <Image src='/logo.svg' alt='logo' width={36} height={36} />
+  <Image src='/logo.svg' alt='logo' width={32} height={32} />
 </Link>
 
 
@@ -62,10 +66,10 @@ return () => {
  exit={{opacity: 0, y: 0}} 
  transition={{duration: 0.5}}
 className='fixed top-[64px] w-full h-[calc(100vh-64px)] bg-background inset-x-0'>
-<div className='flex flex-col space-y-2 py-4'>
+<div className='flex flex-col space-y-2 py-4 z-50'>
   {
     navigation.map(({name, href}, i) => (
-      <Link href={href} key={i} className='text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark'>
+      <Link onClick={handleClick} href={href} key={i} className='text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark'>
        {name}
        </Link>
     ))

@@ -1,23 +1,24 @@
-import { ReactNode, type FC } from 'react';
+import { cn } from '@/lib/classMerge';
+import { ReactNode, type FC, HTMLAttributes } from 'react';
 
-interface HeroProps {
+interface HeroProps extends HTMLAttributes<HTMLDivElement> {
 children: ReactNode;
 }
-interface HeroElementProps {
+interface HeroElementProps extends HTMLAttributes<HTMLTitleElement> {
   children: ReactNode;
 }
 
-export const HeroTitle: FC<HeroElementProps> = ({children}) => {
-  return <h1 className='text-7xl my-6'>{children}</h1>
+export const HeroTitle: FC<HeroElementProps> = ({children,className}) => {
+  return <h1 className={cn(className, 'text-5xl md:text-7xl leading-[48px] md:text-center')}>{children}</h1>
 } 
 
-export const HeroSubtitle: FC<HeroElementProps> = ({children}) => {
-  return <p className='text-xl mb-12'>{children}</p>
+export const HeroSubtitle: FC<HeroElementProps> = ({children,className}) => {
+  return <p className={cn(className, "text-md md:text-xl mb-4 text-off-white/70 md:text-center")}>{children}</p>
 } 
 
-export const Hero: FC<HeroProps> = ({children}) => {
+export const Hero: FC<HeroProps> = ({children,className, ...props}) => {
   return (
-<div> 
+<div className={cn(className)}> 
 {children}
 </div>
 )
