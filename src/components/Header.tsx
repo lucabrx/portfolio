@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { type FC } from 'react';
 import Container from './Container';
+import Button from './Button';
 
 interface HeaderProps {
   
@@ -25,14 +26,14 @@ const Header: FC<HeaderProps> = ({}) => {
 <nav className='flex'>
   {
     navigation.map(({name, href}, i) => (
-      <Link href={href} key={i} className='text-lg ml-6'>
+      <Link href={href} key={i} className='text-lg ml-6 hover:text-grey transition-colors'>
        {name}
        </Link>
     ))
   }
 </nav>
 
-<Link href="/">Contact</Link>
+<Button href='/' size="md" > Contact</Button>
 </Container>
 </header>
 

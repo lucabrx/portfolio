@@ -53,6 +53,13 @@ module.exports = {
           16: "6.4rem",
           "navigation-height": "var(--navigation-height)",
         },
+        backgroundImage: {
+          "primary-gradient":
+            "conic-gradient(at right bottom, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))",
+        },
+        boxShadow: {
+          primary: "rgb(147 51 234 / 50%) 0px 1px 40px",
+        },
   },
   plugins: [],
 }
