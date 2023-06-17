@@ -6,6 +6,7 @@ import Container from './Container';
 import Button from './Button';
 import { Menu, X } from 'lucide-react';
 import ShouldRender from './ShouldRender';
+import { motion } from 'framer-motion';
 interface HeaderProps {
   
 }
@@ -16,7 +17,7 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ]
 
-const Header: FC<HeaderProps> = ({}) => {
+const Navbar: FC<HeaderProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -26,10 +27,10 @@ const Header: FC<HeaderProps> = ({}) => {
 return () => {
     document.body.style.overflow = 'AUTO'
 }
-}, [isOpen])
+}, [isOpen]);
 
   return (
-<header className={`fixed top-0 left-0 w-full border-b  backdrop-blur-[12px] py-2 ${isOpen ? "bg-background" : "backdrop-blur-[12px] border-transparent-white"}`}> 
+<header className={`fixed top-0 left-0 w-full   py-2 ${isOpen ? "bg-background" : "backdrop-blur-[12px] border-transparent-white border-b"}`}> 
 <Container className="flex h-navigation-height items-center justify-between">
 <Link className='flex items-center' href='/'>
   <Image src='/logo.svg' alt='logo' width={36} height={36} />
@@ -55,7 +56,12 @@ return () => {
 </button>
 
 <ShouldRender if={isOpen}>
-<div className='fixed top-[64px] w-full h-[calc(100vh-64px)] bg-background inset-x-0 overflow-hidden'>
+<motion.div 
+ initial={{opacity: 0, y: 0}}
+ animate={{opacity: 1, y: 0}} 
+ exit={{opacity: 0, y: 0}} 
+ transition={{duration: 0.5}}
+className='fixed top-[64px] w-full h-[calc(100vh-64px)] bg-background inset-x-0'>
 <div className='flex flex-col space-y-2 py-4'>
   {
     navigation.map(({name, href}, i) => (
@@ -65,7 +71,7 @@ return () => {
     ))
   }
 </div>
-</div>
+</motion.div>
 </ShouldRender>
 </div>
 </Container>
@@ -74,4 +80,4 @@ return () => {
 )
 }
 
-export default Header
+export default Navbar

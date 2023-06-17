@@ -1,7 +1,7 @@
-import Header from '@/components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Container from '@/components/Container'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
       <div>
-      <Header />
+      <Navbar />
       <main className="pt-navigation-height">
       {children}
       </main>
