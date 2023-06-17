@@ -1,25 +1,86 @@
 "use client"
-import { cn } from '@/lib/classMerge';
-import Image from 'next/image';
-import { type FC } from 'react';
+import { useState, type FC, CSSProperties, useEffect, useRef } from 'react';
 import {useInView} from 'react-intersection-observer'
 interface HomeImageProps {
   
 }
 
+interface Line {
+  id: string;
+  direction: "to top" | "to left";
+  size: number;
+  duration: number;
+}
+
+function randomNumberBetween (min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
 const HomeImage: FC<HomeImageProps> = ({}) => {
     const {ref, inView} = useInView({threshold: 0.8, triggerOnce: true})
+    const [lines, setLines] = useState<Line[]>([]);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    console.log(inView)
+    const removeLine = (id: string) => {
+      setLines((prev) => prev.filter((line) => line.id !== id));
+    };
+
+    useEffect(() => {
+      if (!inView) return;
+  
+      const renderLine = (timeout: number) => {
+        timeoutRef.current = setTimeout(() => {
+          setLines((lines) => [
+            ...lines,
+            {
+              direction: Math.random() > 0.5 ? "to top" : "to left",
+              duration: randomNumberBetween(1300, 3500),
+              size: randomNumberBetween(10, 30),
+              id: Math.random().toString(36).substring(7),
+            },
+          ]);
+  
+          renderLine(randomNumberBetween(800, 2500));
+        }, timeout);
+      };
+  
+      renderLine(randomNumberBetween(800, 1300));
+  
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      };
+    }, [inView, setLines]);
+
   return (
-<div ref={ref} className=" [perspective:2000px] rounded-md  mt-[96px] max-w-3xl">
+<div ref={ref} className=" [perspective:2000px] rounded-md  mt-[32px] max-w-3xl">
 <div className={`
 relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient
 ${inView ?  "animate-image-rotate" : "[transform:rotateX(25deg)]"}
 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)]
 ${inView ? "before:animate-image-glow" : ""}
 `}>
-
+ <div className="absolute top-0 left-0 z-20 h-full w-full">
+          {lines.map((line) => (
+            <span
+              key={line.id}
+              onAnimationEnd={() => removeLine(line.id)}
+              style={
+                {
+                  "--direction": line.direction,
+                  "--size": line.size,
+                  "--animation-duration": `${line.duration}ms`,
+                } as CSSProperties
+              }
+              className={`
+                absolute top-0 block h-[1px] w-[1px] bg-glow-lines
+                ${line.direction === "to left" ?
+                  "left-0 h-[1px] w-10 animate-glow-line-horizontal md:w-16" : ""}
+                ${line.direction === "to top" &&
+                  "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px]"}
+              `}
+            />
+          ))}
+        </div>
 <svg
     className={
       `
