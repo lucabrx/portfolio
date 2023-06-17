@@ -17,12 +17,12 @@ export default function Home() {
           <span className='sms:hidden'>web developer</span>
           </HeroTitle>
 
-          <HeroSubtitle className='sms:mt-4 animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-100px]'>Feel free to explore my portfolio, where you'll find a collection of my  projects that demonstrate my skills and expertise. <span className='hidden md:block'>
+          <HeroSubtitle className='sms:mt-4 animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0 translate-y-[-100px]'>Feel free to explore my portfolio, where you'll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>
           I'm always excited to take on new challenges.
           </span>
           </HeroSubtitle>
 
-         <div className='animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-100px]'>
+         <div className='animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-100px] mt-4'>
           <Link className={cn(buttonClasses({size: "md"}), "md:hidden flex gap-4")}   href="/">Contact  👋</Link>
           <Link className={cn(buttonClasses({size: "lg"}), "hidden md:flex gap-4 ")}   href="/">Contact  👋</Link>
           </div>
