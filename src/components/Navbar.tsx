@@ -44,7 +44,7 @@ setIsOpen(!isOpen)
 
   return (
 <header className={`fixed top-0 left-0 w-full z-20  ${isOpen ? "bg-background" : "backdrop-blur-[12px] bg-transparent border-transparent-white border-b"}`}> 
-<Container className="flex py-2 h-[56px] items-center justify-between">
+<Container className="flex py-2 h-[56px] items-center justify-between max-w-7xl">
 <Link className='flex items-center' href='/'>
   <Image src='/logo.svg' alt='logo' width={32} height={32} />
 </Link>

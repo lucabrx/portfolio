@@ -1,7 +1,6 @@
 "use client"
 // @ts-ignore
 import { useState, type FC, CSSProperties, useEffect, useRef } from 'react';
-import {useInView} from 'react-intersection-observer'
 interface HomeImageProps {
   
 }
@@ -33,8 +32,8 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
             ...lines,
             {
               direction: Math.random() > 0.6 ? "to top" : "to left",
-              duration: randomNumberBetween(1300, 6500),
-              size: randomNumberBetween(10, 50),
+              duration: randomNumberBetween(1300, 4500),
+              size: randomNumberBetween(10, 30),
               id: Math.random().toString(36).substring(7),
             },
           ]);
@@ -51,7 +50,7 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
     }, [ setLines]);
 
   return (
-<div  className=" [perspective:2000px] rounded-md   max-w-3xl">
+<div  className=" [perspective:2000px] rounded-md max-w-[880px]">
 <div className={`
 relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient
  animate-image-rotate
@@ -73,7 +72,7 @@ before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg
                 ${line.direction === "to left" ?
                   "left-0 h-[1px] w-12 animate-glow-line-horizontal md:w-15" : ""}
                 ${line.direction === "to top" &&
-                  "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px]"}
+                  "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px] "}
               `}
             />
           ))}
@@ -96,8 +95,13 @@ before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg
 {/* @ts-ignore */}
 <img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 md:hidden `}  
 src="/hero2.png" alt='hero image' />
-<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 hidden md:block `}  
+
+<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 hidden md:block lg:hidden `}  
 src="/hero.png" alt='hero image' />
+
+<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 hidden  lg:block `}  
+src="/hero3.png" alt='hero image' />
+
 </div>
 </div>
 )
