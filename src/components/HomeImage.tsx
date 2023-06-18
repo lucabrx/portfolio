@@ -33,7 +33,7 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
             ...lines,
             {
               direction: Math.random() > 0.6 ? "to top" : "to left",
-              duration: randomNumberBetween(1300, 4500),
+              duration: randomNumberBetween(1300, 6500),
               size: randomNumberBetween(10, 50),
               id: Math.random().toString(36).substring(7),
             },
