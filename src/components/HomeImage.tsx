@@ -18,7 +18,6 @@ function randomNumberBetween (min: number, max: number) {
 };
 
 const HomeImage: FC<HomeImageProps> = ({}) => {
-    const {ref, inView} = useInView({threshold: 0.8, triggerOnce: true})
     const [lines, setLines] = useState<Line[]>([]);
     const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -27,7 +26,6 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
     };
 
     useEffect(() => {
-      if (!inView) return;
   
       const renderLine = (timeout: number) => {
         timeoutRef.current = setTimeout(() => {
@@ -50,16 +48,14 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
       return () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
       };
-    }, [inView, setLines]);
+    }, [ setLines]);
 
   return (
-<div ref={ref} className=" [perspective:2000px] rounded-md  mt-[32px] max-w-3xl">
+<div  className=" [perspective:2000px] rounded-md   max-w-3xl">
 <div className={`
 relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient
-${inView ?  "animate-image-rotate" : "[transform:rotateX(25deg)]"}
-before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)]
-${inView ? "before:animate-image-glow" : ""}
-`}>
+ animate-image-rotate
+before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] before:animate-image-glow`}>
  <div className="absolute top-0 left-0 z-20 h-full w-full">
           {lines.map((line) => (
             <span
@@ -86,9 +82,7 @@ ${inView ? "before:animate-image-glow" : ""}
     className={
       `
       absolute top-0 left-0 h-full w-full
-      [&_path]:stroke-white [&_path]:[strokeOpacity:0.2] [&_path]:[stroke-dasharray:1] [&_path]:[stroke-dashoffset:1]
-      ${inView ? "[&_path]:animate-sketch-lines" : ""}
-      `}
+      [&_path]:stroke-white [&_path]:[strokeOpacity:0.2] [&_path]:[stroke-dasharray:1] [&_path]:[stroke-dashoffset:1] [&_path]:animate-sketch-lines`}
     width="100%"
     viewBox="0 0 1499 778"
     fill="none">
@@ -100,9 +94,8 @@ ${inView ? "before:animate-image-glow" : ""}
 </svg>
 
 {/* @ts-ignore */}
-<img className={`relative rounded-md z-10  transition-opacity delay-[650ms]
-${inView ? "opacity-100" : "opacity-0"}
-`}  src="/hero.png" alt='hero image' />
+<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100" `}  
+src="/hero2.png" alt='hero image' />
 
 </div>
 </div>
