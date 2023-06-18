@@ -34,9 +34,9 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
           setLines((lines) => [
             ...lines,
             {
-              direction: Math.random() > 0.5 ? "to top" : "to left",
-              duration: randomNumberBetween(1300, 3500),
-              size: randomNumberBetween(10, 30),
+              direction: Math.random() > 0.6 ? "to top" : "to left",
+              duration: randomNumberBetween(1300, 4500),
+              size: randomNumberBetween(10, 50),
               id: Math.random().toString(36).substring(7),
             },
           ]);
@@ -73,9 +73,9 @@ ${inView ? "before:animate-image-glow" : ""}
                 } as CSSProperties
               }
               className={`
-                absolute top-0 block h-[1px] w-[1px] bg-glow-lines
+                absolute top-0 block  bg-glow-lines
                 ${line.direction === "to left" ?
-                  "left-0 h-[1px] w-10 animate-glow-line-horizontal md:w-15" : ""}
+                  "left-0 h-[1px] w-12 animate-glow-line-horizontal md:w-15" : ""}
                 ${line.direction === "to top" &&
                   "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px]"}
               `}
