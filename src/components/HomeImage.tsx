@@ -50,7 +50,7 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
     }, [ setLines]);
 
   return (
-<div  className=" [perspective:2000px] rounded-md max-w-[880px]">
+<div  className=" [perspective:2000px] rounded-md max-w-[880px] pb-[250px]">
 <div className={`
 relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient
  animate-image-rotate
@@ -72,7 +72,7 @@ before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg
                 ${line.direction === "to left" ?
                   "left-0 h-[1px] w-12 animate-glow-line-horizontal md:w-15" : ""}
                 ${line.direction === "to top" &&
-                  "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px] "}
+                  "right-0 h-[60px] w-[1px] animate-glow-line-vertical md:h-[60px] lg:h-[18px] "}
               `}
             />
           ))}
