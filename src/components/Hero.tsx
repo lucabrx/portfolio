@@ -9,11 +9,11 @@ interface HeroElementProps extends HTMLAttributes<HTMLTitleElement> {
 }
 
 export const HeroTitle: FC<HeroElementProps> = ({children,className}) => {
-  return <h1 className={cn(className, 'text-[44px] leading-[48px]')}>{children}</h1>
+  return <h1 className={cn(className, 'text-5xl leading-[42px] text-left w-full')}>{children}</h1>
 } 
 
 export const HeroSubtitle: FC<HeroElementProps> = ({children,className}) => {
-  return <p className={cn(className, "text-lg ")}>{children}</p>
+  return <p className={cn(className, "text-lg w-full text-left ")}>{children}</p>
 } 
 
 export const Hero: FC<HeroProps> = ({children,className, ...props}) => {

@@ -94,9 +94,10 @@ before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg
 </svg>
 
 {/* @ts-ignore */}
-<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100" `}  
+<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 md:hidden `}  
 src="/hero2.png" alt='hero image' />
-
+<img className={`relative rounded-md z-10  transition-opacity delay-[650ms] opacity-100 hidden md:block `}  
+src="/hero.png" alt='hero image' />
 </div>
 </div>
 )
