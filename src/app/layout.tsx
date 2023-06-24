@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { TailwindIndicator } from '@/components/helpers/TailwindIndicator'
 
 export const metadata = {
   title: 'Luka Brkovic',
@@ -29,6 +30,7 @@ export default function RootLayout({
       </main>
       <Footer />
         </div>
+      <TailwindIndicator />
       </body>
     </html>
   )

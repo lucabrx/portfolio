@@ -30,13 +30,13 @@ const Accordion: React.FC<AccordionProps> = ({
         }`}
         onClick={toggleAccordion}
       >
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
         <ChevronDown className={`transition-transform duration-300
         ${isActive ? 'rotate-180' : 'rotate-0'}`} />
         
       </div>
       {isActive && (
-        <div className="p-4">{children}</div>
+        <div className="p-4 md:px-7 md:py-4">{children}</div>
       )}
     </div>
   );
