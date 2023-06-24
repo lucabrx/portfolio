@@ -17,19 +17,16 @@ export default function RootLayout({
     <html lang="en">
        <head>
         <meta
-
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
       <body className='bg-page-gradient'>
-      <div>
       <Navbar />
       <main className="pt-navigation-height ">
       {children}
       </main>
       <Footer />
-        </div>
       <TailwindIndicator />
       </body>
     </html>

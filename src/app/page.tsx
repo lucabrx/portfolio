@@ -1,7 +1,5 @@
-import AboutSection from '@/components/sections/AboutSection'
 import { StarsIllustration } from '@/components/StarsIllustration'
 import HeroSection from '@/components/sections/HeroSection'
-import AccordionContainer from '@/components/sections/SkillsContainer';
 import SkillsContainer from '@/components/sections/SkillsContainer';
 const accordions = [
   { title: 'Section 1', content: 'Content for section 1' },
