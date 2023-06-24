@@ -73,7 +73,7 @@ const accordions = [
   const SkillsContainer: FC= ({}) => {
     const {ref, inView} = useInView({
       triggerOnce: true,
-      threshold: 0.2,
+      threshold: 1,
     });
   const [activeIndex, setActiveIndex] = useState(-1);
   
