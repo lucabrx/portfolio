@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import  { buttonClasses } from '@/components/Button'
+import  { buttonClasses } from '@/components/ui/Button'
 import  {Hero, HeroSubtitle, HeroTitle } from '@/components/Hero'
 import HomeImage from '@/components/HomeImage'
 import { cn } from '@/lib/classMerge'

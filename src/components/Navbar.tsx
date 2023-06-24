@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, type FC, useEffect } from 'react';
-import Button from './Button';
+import Button from './ui/Button';
 import { Menu, X } from 'lucide-react';
-import ShouldRender from './ShouldRender';
+import ShouldRender from './helpers/ShouldRender';
 import { motion } from 'framer-motion';
 import { Facebook, Github, Instagram, Send } from 'lucide-react';
 
