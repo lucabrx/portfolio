@@ -1,6 +1,5 @@
 import AboutSection from '@/components/AboutSection'
 import  { buttonClasses } from '@/components/Button'
-import Container from '@/components/Container'
 import  {Hero, HeroSubtitle, HeroTitle } from '@/components/Hero'
 import HomeImage from '@/components/HomeImage'
 import { StarsIllustration } from '@/components/StarsIllustration'
@@ -10,7 +9,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-    <Container className='w-full overflow-hidden  '>
+    <div className='w-full overflow-hidden  container'>
        <Hero className='w-full flex flex-col justify-center items-center mt-4 md:mt-8 lg:mt-12 xl:mt-18 '>
 
           <HeroTitle className=' mb-1 animate-fade-in opacity-0 translate-y-[-100px]'> Hello, I&apos;m <br className='md:hidden'/> <span className='text-transparent bg-clip-text bg-title-gradient '>Luka Brkovic,</span>  <br/>
@@ -30,7 +29,7 @@ export default function Home() {
           <HomeImage />
         </div>
         </Hero>
-        </Container>
+        </div>
 
         <div
         className="
@@ -41,9 +40,9 @@ export default function Home() {
       >
         <StarsIllustration />
       </div>
-        <Container className='mt-[160px]'>
-        <AboutSection />
-        </Container>
+        <div className='mt-[160px] container'>
+          <AboutSection />
+        </div>
      
       </>
   )

@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, type FC, useEffect } from 'react';
-import Container from './Container';
 import Button from './Button';
 import { Menu, X } from 'lucide-react';
 import ShouldRender from './ShouldRender';
@@ -44,7 +43,7 @@ setIsOpen(!isOpen)
 
   return (
 <header className={`fixed top-0 left-0 w-full z-20  ${isOpen ? "bg-background" : "backdrop-blur-[12px] bg-transparent border-transparent-white border-b"}`}> 
-<Container className="flex py-2 h-[56px] items-center justify-between max-w-7xl">
+<div className="flex py-2 h-[56px] items-center justify-between container">
 <Link className='flex items-center' href='/'>
   <Image src='/logo.svg' alt='logo' width={32} height={32} />
 </Link>
@@ -95,7 +94,7 @@ className='absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x
 </motion.div>
 </ShouldRender>
 </div>
-</Container>
+</div>
 </header>
 
 )

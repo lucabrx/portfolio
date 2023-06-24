@@ -1,5 +1,4 @@
 import { type FC } from 'react';
-import Container from './Container';
 import Image from 'next/image';
 import { Facebook, Github, Instagram, Send } from 'lucide-react';
 import Button from './Button';
@@ -12,7 +11,7 @@ interface FooterProps {
 const Footer: FC<FooterProps> = ({}) => {
   return (
     <footer className="mt-12 border-t border-transparent-white py-4 text-sm">
-    <Container className="flex flex-col justify-between lg:flex-row">
+    <div className="flex flex-col justify-between lg:flex-row container">
         <div className="flex h-full w-full justify-between  items-center gap-4 ">
           <div className="flex items-end text-grey gap-4">
           <Image src='/logo.svg' alt='logo' width={32} height={32} />
@@ -33,7 +32,7 @@ const Footer: FC<FooterProps> = ({}) => {
            </IconContainer>
           </div>
         </div>
-    </Container>
+    </div>
     </footer>
 )
 }

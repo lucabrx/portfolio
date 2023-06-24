@@ -1,5 +1,4 @@
 "use client"
-// @ts-ignore
 import { useState, type FC, CSSProperties, useEffect, useRef } from 'react';
 interface HomeImageProps {
   
