@@ -18,15 +18,15 @@ const HeroSection: FC<HeroSectionProps> = ({}) => {
        <span className='ml-1 md:hidden'>web developer</span>
        </HeroTitle>
 
-       <HeroSubtitle className='animate-fade-in max-w-[850px] [--animation-delay:400ms] opacity-0 translate-y-[-100px] ml-2 mt-2 md:mt-4'>Welcome to  my portfolio, where you&apos;ll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>
+       <HeroSubtitle className='animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0 translate-y-[-100px] ml-2 mt-2 md:mt-4'>Welcome to  my portfolio, where you&apos;ll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>
        I&apos;m always excited to take on new challenges.
        </span>
        </HeroSubtitle>
 
-      <div className='animate-fade-in [--animation-delay:800ms] opacity-0 translate-y-[-100px] mt-4 self-start sms:self-center ml-2 md:mt-4'>
+      <div className='animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-100px] mt-4 self-start sms:self-center ml-2 md:mt-4'>
        <Link className={cn(buttonClasses({size: "lg"}), "flex gap-4 ")}   href="/">Contact  👋</Link>
        </div>
-     <div className='animate-fade-in [--animation-delay:1200ms] opacity-0 translate-y-[-100px] mt-6 md:mt-8 lg:mt-12'>
+     <div className='animate-fade-in [--animation-delay:700ms] opacity-0 translate-y-[-100px] mt-6 md:mt-8 lg:mt-12'>
        <HomeImage />
      </div>
      </Hero>

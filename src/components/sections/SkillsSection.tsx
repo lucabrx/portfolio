@@ -81,15 +81,15 @@ const accordions = [
     return (
       <div ref={ref} className='mt-[100px] md:mt-[140px] lg:mt-[160px] container'> 
       <h2 className={cn("w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0", inView ? "animate-fade-in" : "")}>Nice to meet u! 👋</h2>
-      <p className={cn("text-center mt-4 text-off-white/80 container opacity-0", inView ? "animate-fade-in [--animation-delay:400ms]" : "")}>
-        I'm a passionate junior frontend developer with a keen eye for design and a strong desire to create engaging user experiences.
+      <p className={cn("text-center mt-4 text-off-white/80 container opacity-0", inView ? "animate-fade-in [--animation-delay:200ms]" : "")}>
+        I&apos;m a passionate junior frontend developer with a keen eye for design and a strong desire to create engaging user experiences.
         </p>
        <div className='pt-7 grid grid-cols-1 lg:grid-cols-2 gap-7'>
-        <div className={cn("aspect-video w-full bg-transparent-white flex justify-center items-center  opacity-0 ", inView ? "animate-fade-in [--animation-delay:800ms]" : "")}>
+        <div className={cn("aspect-video w-full bg-transparent-white flex justify-center items-center  opacity-0 ", inView ? "animate-fade-in [--animation-delay:400ms]" : "")}>
 
       
         </div>
-        <div className={cn("md:space-y-2 opacity-0", inView ? "animate-fade-in [--animation-delay:1200ms]" : "")}>
+        <div className={cn("md:space-y-2 opacity-0", inView ? "animate-fade-in [--animation-delay:600ms]" : "")}>
       {accordions.map((accordion, index) => (
           <Accordion
             key={index}
