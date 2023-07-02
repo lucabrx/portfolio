@@ -7,11 +7,15 @@ module.exports = {
   ],
   theme: {
     container: {
+      screens: {
+        xl: "1280px",
+      },
       center: true,
       padding: {
         DEFAULT: "16px",
         xl: "32px"
-      }
+      },
+      
     },
         colors: {
           transparent: "transparent",
@@ -84,7 +88,8 @@ module.exports = {
         "linear-gradient(var(--direction),#9d9bf2 0.43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
         "radial-faded":
         "radial-gradient(circle at bottom center,var(--color),transparent 70%)",
-      
+        "glass-gradient":
+        "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
         },
         boxShadow: {
           primary: "rgb(147 51 234 / 50%) 0px 1px 40px",

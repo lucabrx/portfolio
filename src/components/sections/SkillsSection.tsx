@@ -23,9 +23,7 @@ const frontendTools: ToolsProps[] = [
 ]
 const backendTools: ToolsProps[] = [
   
-  { text: "Express",
-    Icon: Icons.express,
-  },
+  
   { text: "Mongo",
     Icon: Icons.mongodb,
   },
@@ -37,43 +35,42 @@ const designTools: ToolsProps[] = [
   { text: "Figma",
     Icon: Icons.figma,
   },
-  { text: "Photoshop",
-    Icon: Icons.ps,
+  { text: "Figma",
+    Icon: Icons.figma,
   },
 ]
 const accordions = [
   { title: '💅 Frontend', content: (<div className='flex flex-col space-y-2 justify-center items-start'>
    {frontendTools.map((tool, index) => (
-   <div className='flex items-center justify-between  max-w-[120px] w-full' key={index}>
-    <div className='mr-4 p-2'>{<tool.Icon className='h-6 w-6' />}</div>
+   <div className='flex items-center justify-start  max-w-[120px] w-full' key={index}>
+    <div className='mr-4 p-2 aspect-square w-10'>{<tool.Icon className='h-6 aspect-square' />}</div>
     <span className='text-lg'>{tool.text}</span>
     </div>
    ))}
   </div>) },
   { title: '🎩 Backend', content: (<div className='flex flex-col space-y-2 justify-center items-start'>
   {backendTools.map((tool, index) => (
-   <div className='flex items-center justify-between  max-w-[125px] w-full' key={index}>
-   <div className='mr-4 p-2'>{<tool.Icon className='h-6 w-6' />}</div>
+   <div className='flex items-center justify-start  max-w-[125px] w-full' key={index}>
+   <div className='mr-4 p-2 aspect-square w-10'>{<tool.Icon className='h-6 aspect-square' />}
+   </div>
    <span className='text-lg'>{tool.text}</span>
    </div>
   ))}
  </div>) },
   { title: '🎨 Design', content: (<div className='flex flex-col space-y-2 justify-center items-start'>
   {designTools.map((tool, index) => (
-   <div className='flex items-center justify-between  max-w-[145px] w-full' key={index}>
-   <div className='mr-4 p-2'>{<tool.Icon className='h-6 w-6' />}</div>
+   <div className='flex items-center justify-start  max-w-[145px] w-full' key={index}>
+   <div className='mr-4 p-2 aspect-square w-10  '>{<tool.Icon className='h-6 aspect-square' />}</div>
    <span className='text-lg'>{tool.text}</span>
    </div>
   ))}
  </div>) },
 ];
 
-// opacity-0", inView ? "animate-fade-in" : ""
-// [--animation-delay:400ms]
-  const SkillsContainer: FC= ({}) => {
+  const SkillsSection: FC= ({}) => {
     const {ref, inView} = useInView({
       triggerOnce: true,
-      threshold: 1,
+      threshold: 0.5,
     });
   const [activeIndex, setActiveIndex] = useState(-1);
   
@@ -83,12 +80,16 @@ const accordions = [
   
     return (
       <div ref={ref} className='mt-[100px] md:mt-[140px] lg:mt-[160px] container'> 
-      <h2 className={cn("w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0", inView ? "animate-fade-in" : "")}>My Skills 👨‍💻</h2>
+      <h2 className={cn("w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0", inView ? "animate-fade-in" : "")}>Nice to meet u! 👋</h2>
+      <p className={cn("text-center mt-4 text-off-white/80 container opacity-0", inView ? "animate-fade-in [--animation-delay:400ms]" : "")}>
+        I'm a passionate junior frontend developer with a keen eye for design and a strong desire to create engaging user experiences.
+        </p>
        <div className='pt-7 grid grid-cols-1 lg:grid-cols-2 gap-7'>
-        <div className={cn("aspect-video w-full bg-transparent-white flex justify-center items-center opacity-0", inView ? "animate-fade-in [--animation-delay:400ms]" : "")}>
-          Amazing Image
+        <div className={cn("aspect-video w-full bg-transparent-white flex justify-center items-center  opacity-0 ", inView ? "animate-fade-in [--animation-delay:800ms]" : "")}>
+
+      
         </div>
-        <div className={cn("md:space-y-2 opacity-0", inView ? "animate-fade-in [--animation-delay:800ms]" : "")}>
+        <div className={cn("md:space-y-2 opacity-0", inView ? "animate-fade-in [--animation-delay:1200ms]" : "")}>
       {accordions.map((accordion, index) => (
           <Accordion
             key={index}
@@ -104,5 +105,5 @@ const accordions = [
     );
   };
   
-  export default SkillsContainer;
+  export default SkillsSection;
 

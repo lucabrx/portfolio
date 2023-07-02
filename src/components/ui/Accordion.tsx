@@ -23,9 +23,9 @@ const Accordion: React.FC<AccordionProps> = ({
   };
 
   return (
-    <div className="accordion">
+    <div>
       <div
-        className={`accordion-header flex items-center justify-between cursor-pointer bg-gray-200 p-4 ${
+        className={`flex items-center justify-between cursor-pointer bg-gray-200 p-4 ${
           isActive ? 'active' : ''
         }`}
         onClick={toggleAccordion}
@@ -36,7 +36,7 @@ const Accordion: React.FC<AccordionProps> = ({
         
       </div>
       {isActive && (
-        <div className="p-4 md:px-7 md:py-4">{children}</div>
+        <div className="p-4 md:px-7 md:py-4 ">{children}</div>
       )}
     </div>
   );

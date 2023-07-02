@@ -25,9 +25,9 @@ interface ButtonProps extends VariantProps<typeof buttonClasses>, HTMLAttributes
   children: ReactNode;
 }
 
-const Button: FC<ButtonProps> = ({children,variant,size,className}) => {
+const Button: FC<ButtonProps> = ({children,variant,size,className,...props}) => {
   return (
-<button  className={buttonClasses({variant,size,className})}> 
+<button {...props} className={buttonClasses({variant,size,className})}> 
 {children}
 </button>
 )

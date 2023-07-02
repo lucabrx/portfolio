@@ -37,6 +37,8 @@ body {
     mask-image: linear-gradient(black, transparent 70%)
   }
 
-
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
 }
