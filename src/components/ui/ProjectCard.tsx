@@ -1,0 +1,56 @@
+import Image from 'next/image';
+import { type FC } from 'react';
+import Badge from './Badge';
+import Button, { buttonClasses } from './Button';
+import { Icons } from './Icons';
+import { Project } from '../../../config/projects';
+
+interface ProjectCardProps {
+    project: Project
+}
+
+const ProjectCard: FC<ProjectCardProps> = ({project}) => {
+  return (
+    <div  className="relative flex w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-md border border-transparent-white bg-glass-gradient md:basis-[calc(42.66%-12px)] md:min-w-[510px] gap-3 md:gap-5 pb-6 ">
+    <div className=' flex flex-wrap gap-2 mt-2 md:mt-3 absolute top-0 right-2 z-20  md:max-w-[360px] justify-end'>
+    <Badge>{project.mainBadge}</Badge>
+    {project.badges.map(badge => (
+            <Badge  key={badge} variant="secondary">{badge}</Badge>
+            ))
+    }
+    </div>
+    <div className='relative w-full aspect-video shadow-secondary'>
+    
+    <Image src={project.image} alt={project.title} fill sizes="100%" />
+    <div className='bg-glass-gradient absolute inset-0' /> 
+    </div>
+    <div className='px-4'>
+    <h2 className='text-xl text-off-white md:text-2xl '>
+    {project.title}
+    </h2>
+    <p className='text-sm text-off-white/70 mt-1 md:text-md'>
+    {project.description}
+    </p>
+
+    <div className='flex gap-3 w-full justify-center mt-4'>
+        <a href={project.link} className={buttonClasses({
+            size: 'md',
+            className: "w-full md:w-auto md:px-6"
+        })}>Visit Page</a>
+        <a href={project.github} className={buttonClasses({
+            variant: "github",
+            size: 'md',
+            className: "w-full md:w-auto md:px-6"
+        })}>
+        <Icons.gitHub className='mr-2 h-4 w-4'/>
+        Github
+        </a>
+    </div>
+
+   
+    </div>
+  </div>
+)
+}
+
+export default ProjectCard

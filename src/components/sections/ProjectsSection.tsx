@@ -3,6 +3,8 @@ import { cn } from '@/lib/classMerge';
 import { useRef, type FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Icons } from '../ui/Icons';
+import ProjectCard from '../ui/ProjectCard';
+import { projects } from '../../../config/projects';
 
 const ProjectsSection: FC = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -33,19 +35,17 @@ const ProjectsSection: FC = () => {
 <div ref={scrollContainerRef}  
 className={cn("flex gap-7 overflow-x-scroll px-8 md:px-0 py-6 hide-scrollbar opacity-0 transition-transform transform", inView ? "animate-fade-in [--animation-delay:300ms]" : "")}>
     {
-        Array.from({ length: 10 }).map((_, i) => (
-            <div key={i} className="relative flex min-h-[400px] w-full shrink-0 snap-center flex-col items-center justify-end overflow-hidden rounded-3xl border border-transparent-white bg-glass-gradient p-8 text-center md:max-w-[100vw] md:basis-[calc(42.66%-12px)] md:p-14">
-              {i}
-            </div>
+        projects.map(project => (
+          <ProjectCard key={project.id} project={project} />
         ))
     }
 </div>
-<button className={cn('absolute z-30 top-1/2 left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0', inView ? "animate-fade-in [--animation-delay:300ms] " : "")} 
-onClick={() => handleScroll(-400)}>
+<button className={cn('absolute z-30 top-1/2 left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms] " : "")} 
+onClick={() => handleScroll(-100)}>
 <Icons.left className='h-7' />
 </button>
-<button className={cn('absolute z-30 top-1/2 right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0', inView ? "animate-fade-in [--animation-delay:300ms] " : "")} 
-onClick={() => handleScroll(400)}>
+<button className={cn('absolute z-30 top-1/2 right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms]" : "")} 
+onClick={() => handleScroll(100)}>
 <Icons.right className='h-7' />
 </button>
 </div>

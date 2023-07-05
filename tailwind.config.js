@@ -93,6 +93,7 @@ module.exports = {
         },
         boxShadow: {
           primary: "rgb(147 51 234 / 50%) 0px 1px 40px",
+          secondary: "rgb(70 102 241 / 50%) 0px 1px 20px",
           
         },
         screens: {

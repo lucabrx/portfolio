@@ -3,11 +3,13 @@ import { ReactNode, type FC, HTMLAttributes } from 'react';
 import { cva, VariantProps } from "class-variance-authority";
 
 
-export const buttonClasses = cva(" rounded-md flex items-center", {
+export const buttonClasses = cva(" rounded-md inline-flex items-center justify-center cursor-pointer", {
     variants: {
       variant: {
-        primary: "bg-primary-gradient hover:text-shadow hover:shadow-primary transition-[shadow,text-shadow] duration-300",
-        secondary: "text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in "
+        primary: "bg-primary-gradient hover:text-shadow hover:shadow-primary transition-[shadow,text-shadow] duration-300 ",
+        secondary: "text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in",
+        github : "shadow-sm hover:bg-[#27272a] bg-[#27272a]/70 text-[##fefffe]",
+
       },
       size: {
         sm: "text-xs px-3 h-7",
