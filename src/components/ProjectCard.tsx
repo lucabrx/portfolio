@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({project}) => {
   return (
-    <div  className="relative flex w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-md border border-transparent-white bg-glass-gradient md:basis-[calc(42.66%-12px)] md:min-w-[510px] gap-3 md:gap-5 pb-4 md:pb-6 ">
+    <div  className="relative flex w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-md border border-transparent-white bg-glass-gradient md:basis-[calc(42.66%-12px)] md:min-w-[510px] gap-3 md:gap-5 pb-4 ">
     <div className=' flex flex-wrap gap-2 mt-2 md:mt-3 absolute top-0 right-2 z-20  md:max-w-[360px] justify-end'>
     <Badge>{project.mainBadge}</Badge>
     {project.badges.map(badge => (
@@ -32,11 +32,7 @@ const ProjectCard: FC<ProjectCardProps> = ({project}) => {
     {project.description}
     </p>
 
-    <div className='flex gap-3 w-full justify-center mt-4'>
-        <a href={project.link} className={buttonClasses({
-            size: 'md',
-            className: "w-full md:w-auto md:px-6"
-        })}>Visit Page</a>
+    <div className='flex gap-3 w-full justify-end mt-4'>
         <a href={project.github} className={buttonClasses({
             variant: "github",
             size: 'md',
@@ -45,6 +41,11 @@ const ProjectCard: FC<ProjectCardProps> = ({project}) => {
         <Icons.gitHub className='mr-2 h-4 w-4'/>
         Github
         </a>
+        <a href={project.link} className={buttonClasses({
+            size: 'md',
+            variant: "primary",
+            className: "w-full md:w-auto md:px-6"
+        })}>Visit Page</a>
     </div>
 
    

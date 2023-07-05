@@ -7,6 +7,7 @@ export const buttonClasses = cva(" rounded-md inline-flex items-center justify-c
     variants: {
       variant: {
         primary: "bg-primary-gradient hover:text-shadow hover:shadow-primary transition-[shadow,text-shadow] duration-300 ",
+        primary_without_glow: "bg-primary-gradient  duration-300 hover:bg-background",
         secondary: "text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in",
         github : "shadow-sm hover:bg-[#27272a] bg-[#27272a]/70 text-[##fefffe]",
 
