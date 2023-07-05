@@ -13,7 +13,7 @@ export type Project = {
 export const projects: Project[] = [
     {   
         id: 1,
-        title: "Vox Populi Blog",
+        title: "Vox Populi Blog-News Portal",
         description: "Uploading images, rich markdown editor, comments and more.",
         image: "/projects/vox-populi-full.png",
         link: "https://vox-populiv3.vercel.app/",

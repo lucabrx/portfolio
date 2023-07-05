@@ -3,7 +3,7 @@ import { cn } from '@/lib/classMerge';
 import { useRef, type FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Icons } from '../ui/Icons';
-import ProjectCard from '../ui/ProjectCard';
+import ProjectCard from '../ProjectCard';
 import { projects } from '../../../config/projects';
 
 const ProjectsSection: FC = () => {
