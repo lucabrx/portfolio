@@ -14,6 +14,7 @@ const HomeImage: FC<HomeImageProps> = ({}) => {
 relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient
  animate-image-rotate
 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)] before:animate-image-glow`}>
+  <div className='absolute inset-0 z-30 bg-glass-gradient2 blur-sm'></div>
 
 <svg
     className={
@@ -40,6 +41,7 @@ src="/hero.png" alt='hero image' />
 src="/hero3.png" alt='hero image' />
 
 </div>
+
 </div>
 )
 }

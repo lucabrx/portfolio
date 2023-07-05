@@ -90,6 +90,8 @@ module.exports = {
         "radial-gradient(circle at bottom center,var(--color),transparent 70%)",
         "glass-gradient":
         "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+        "glass-gradient2":
+        "linear-gradient(0deg, rgba(40,44,52,0.4) 0%, rgba(17,0,32,.2) 100%)",
         },
         boxShadow: {
           primary: "rgb(147 51 234 / 50%) 0px 1px 40px",
