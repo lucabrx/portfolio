@@ -1,7 +1,6 @@
 import { type FC } from 'react';
 import Image from 'next/image';
 import { Facebook, Github, Instagram, Send } from 'lucide-react';
-import Button from './ui/Button';
 import IconContainer from './ui/IconContainer';
 
 interface FooterProps {

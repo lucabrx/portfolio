@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { type FC } from 'react';
 import Badge from './ui/Badge';
-import Button, { buttonClasses } from './ui/Button';
+import  { buttonClasses } from './ui/Button';
 import { Icons } from './ui/Icons';
 import { Project } from '../../config/projects';
 
