@@ -1,44 +1,12 @@
 "use client"
 import {type FC, useState } from 'react';
 import Accordion from '../ui/Accordion';
-import { Icons } from '../ui/Icons';
-import { LucideIcon } from 'lucide-react';
+
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/classMerge';
+import { frontendTools,backendTools,designTools } from '../../../config/tools';
 
-interface ToolsProps {
-  text: string;
-  Icon: LucideIcon
-}
-const frontendTools: ToolsProps[] = [
-  { text: "React",
-    Icon: Icons.react,
-  },
-  { text: "Next.js",
-    Icon: Icons.next,
-  },
-  { text: "Svelte",
-    Icon: Icons.svelte,
-  },
-]
-const backendTools: ToolsProps[] = [
-  
-  
-  { text: "Mongo",
-    Icon: Icons.mongodb,
-  },
-  { text: "SQL",
-    Icon: Icons.sql,
-  },
-]
-const designTools: ToolsProps[] = [
-  { text: "Figma",
-    Icon: Icons.figma,
-  },
-  { text: "Figma",
-    Icon: Icons.figma,
-  },
-]
+
 const accordions = [
   { title: '💅 Frontend', content: (<div className='flex flex-col space-y-2 justify-center items-start'>
    {frontendTools.map((tool, index) => (
@@ -70,7 +38,7 @@ const accordions = [
   const SkillsSection: FC= ({}) => {
     const {ref, inView} = useInView({
       triggerOnce: true,
-      threshold: 0.5,
+      threshold: 0.3,
     });
   const [activeIndex, setActiveIndex] = useState(-1);
   
