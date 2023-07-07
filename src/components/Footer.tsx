@@ -9,7 +9,7 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
-    <footer className="mt-12 border-t border-transparent-white py-4 text-sm">
+    <footer className="border-t border-transparent-white py-4 text-sm">
     <div className="flex flex-col justify-between lg:flex-row container">
         <div className="flex h-full w-full justify-between  items-center gap-4 ">
           <div className="flex items-end text-grey gap-4">
