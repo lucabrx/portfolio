@@ -1,13 +1,13 @@
 import './globals.css'
+
+import { headConfig } from '@/config/head'
+
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { TailwindIndicator } from '@/components/helpers/TailwindIndicator'
 import { ToastProvider } from '@/components/helpers/ToastProvider'
 
-export const metadata = {
-  title: 'Luka Brkovic',
-  description: 'Luka Brkovic - Web Developer, Portfolio, Blog, Resume, Contact, About',
-}
+export const metadata = headConfig
 
 export default function RootLayout({
   children,
