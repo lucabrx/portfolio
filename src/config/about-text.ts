@@ -30,6 +30,6 @@ export const textHidden: AboutText[] = [
         text: "🤖 I'am a big fan of technology, and I like to try out new things."
     },
     {
-       text: "🧑‍💻 I'am currently open for new opportunities, so if you&apos;re interested in working with me, feel free to contact me." 
+       text: "🧑‍💻 I'am currently open for new opportunities, so if you're interested in working with me, feel free to contact me." 
     }
 ]

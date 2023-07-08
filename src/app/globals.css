@@ -8,6 +8,31 @@
 body {
     font-family: "montserrat", sans-serif;
 }
+.rotate-20 {
+  transform:   rotateY(15deg) rotateX(-15deg);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.rotate-20:hover{
+  transform:   rotateY(0deg) rotateX(0deg);
+  transform: scale(1.05);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+@media (max-width: 768px) {
+  .rotate-20 {
+    transform:   rotateY(15deg) rotateX(-20deg);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+  .rotate-20:hover{
+    transform: scale(1.02);
+  }
+}
 
 @layer base {
   :root {

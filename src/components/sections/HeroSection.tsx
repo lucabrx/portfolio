@@ -15,7 +15,8 @@ const HeroSection: FC = () => {
     <h1 className=' mb-1 animate-fade-in opacity-0  text-5xl leading-[42px] text-left w-full lg:leading-[58px] lg:text-[56px]'> Hello, I&apos;m <br className='md:hidden'/> 
     <span className='text-transparent bg-clip-text bg-title-gradient '>Luka Brkovic,</span> 
        <span className='hidden lg:inline-block'>a self tought  developer</span>
-       <span className='ml-1 lg:hidden'>web developer</span>
+       <br className='md:hidden' />
+       <span className='ml-1 lg:hidden'> web developer</span>
     </h1>
 
     <h3 className='animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0   mt-2 md:mt-4 text-lg  w-full text-left'>Welcome to  my portfolio, where you&apos;ll find a collection of my  projects that demonstrate my skills and expertise. {"  "}<span className='hidden md:inline-block'>

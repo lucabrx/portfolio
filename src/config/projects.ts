@@ -23,7 +23,7 @@ export const projects: Project[] = [
     },
     {
         id: 2,
-        title: "IconAI - AI Generated Icons",
+        title: "IconAI - AI Dall-E Generated Icons",
         description: "AI generated icons with Dall-E API and tRPC for full type safety.",
         image: "/projects/icon-gen-full.png",
         link: "https://icon-ai-ughw.vercel.app/",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        title: "Fitness Trainer Homepage",
+        title: "Fitness Trainer Homepage - JD",
         description: "Fitness trainer homepage with a login form, it will be updated later.",
         image: "/projects/fitness-t-full.png",
         link: "https://fitness-coach-jimmy-dzomlia.vercel.app/",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     },
     {
         id: 4,
-        title: "Chatnik - Chat App",
+        title: "Chatnik - Chat App with Socket",
         description: "Chat app with a login form and a chat page with socket (pusher API).",
         image: "/projects/chatnik-full.png",
         link: "https://chatnik.vercel.app",

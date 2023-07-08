@@ -44,7 +44,7 @@ const ContactForm: FC = () => {
         } catch(err) {
         } finally {
             setLoading(false)
-            context?.showToast("Message Successfuly Sended, You will be contacted shortly.", 3000)
+            context?.showToast("✍️ Message Successfuly Sended, You will be contacted shortly.", 3000)
         }
     }
 

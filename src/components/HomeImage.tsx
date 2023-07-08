@@ -11,24 +11,24 @@ const HomeImage: FC = () => {
 
 
 
-<div className='flex mt-12 '>
-  <div className='relative mr-4 left-3 md:left-0  aspect-video w-[calc(100vw-64px)] z-10 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md -skew-x-6 md:-skew-x-[8deg]  md:-rotate-3  md:origin-bottom'>
+<div className='flex mt-12 rotate-20'>
+  <div className='relative mr-4 left-3 md:left-0  aspect-video w-[calc(100vw-64px)] z-10 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md '>
   <Image src="/projects/fitness-t-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
-  <div className='absolute  aspect-video w-[calc(45%)] -top-10 left-0 md:-left-4  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md -skew-x-6 md:-skew-x-[8deg]  md:-rotate-3  md:origin-bottom'>
+  <div className='absolute  aspect-video w-[calc(45%)] -top-10 left-0 md:-left-4  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md '>
   <Image src="/projects/chatnik-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
-  <div className='absolute  aspect-video w-[calc(45%)] -top-10 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md -skew-x-6 md:-skew-x-[8deg]  md:-rotate-3  md:origin-bottom'>
+  <div className='absolute  aspect-video w-[calc(45%)] -top-10 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md '>
   <Image src="/projects/quanta-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
-  <div className='absolute  aspect-video w-[calc(65%)] -bottom-4 left-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-30 rounded-md -skew-x-6 md:-skew-x-[8deg] md:-rotate-3  md:origin-bottom '>
+  <div className='absolute  aspect-video w-[calc(65%)] -bottom-4 left-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-30 rounded-md '>
   <Image src="/projects/icon-gen-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
-  <div className='absolute  aspect-video w-[calc(65%)] -bottom-8 -right-0 md:-right-4 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md -skew-x-6 md:-skew-x-[8deg]  md:-rotate-3 md:origin-bottom'>
+  <div className='absolute  aspect-video w-[calc(65%)] -bottom-8 -right-0 md:-right-4 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md '>
   <Image src="/projects/vox-populi-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
