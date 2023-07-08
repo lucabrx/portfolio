@@ -35,7 +35,7 @@ const ProjectsSection: FC = () => {
 <h2 className={cn("w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0", inView ? "animate-fade-in" : "")}>My Projects👨‍💻</h2>
 <div className="flex gap-6 overflow-x-auto mt-6 hide-scrollbar relative  ">
 <div ref={scrollContainerRef}  
-className={cn("flex gap-7 overflow-x-scroll px-8 md:px-0 py-6 hide-scrollbar opacity-0 transition-transform transform", inView ? "animate-fade-in [--animation-delay:300ms]" : "")}>
+className={cn("flex gap-4 md:gap-7 overflow-x-scroll px-5 md:px-0 py-6 hide-scrollbar opacity-0 transition-transform transform", inView ? "animate-fade-in [--animation-delay:300ms]" : "")}>
     {
         projects.map(project => (
           <ProjectCard key={project.id} project={project} />

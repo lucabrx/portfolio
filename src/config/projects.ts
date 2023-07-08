@@ -38,8 +38,18 @@ export const projects: Project[] = [
         description: "Fitness trainer homepage with a login form, it will be updated later.",
         image: "/projects/fitness-t-full.png",
         link: "https://fitness-coach-jimmy-dzomlia.vercel.app/",
-        github: "",
+        github: "https://github.com/lucabrx/fitness-coach-jimmy-dzomlia",
         mainBadge: "Next.js",
         badges: [ "Typescript", "TailwindCSS", "Prisma"]
+    },
+    {
+        id: 4,
+        title: "Chatnik - Chat App",
+        description: "Chat app with a login form and a chat page with socket (pusher API).",
+        image: "/projects/chatnik-full.png",
+        link: "https://chatnik.vercel.app",
+        github: "https://github.com/lucabrx/chatnik",
+        mainBadge: "Next.js",
+        badges: [ "Typescript", "PusherAPI", "Redis", "TailwindCSS"]
     }
 ]
