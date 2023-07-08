@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { TailwindIndicator } from '@/components/helpers/TailwindIndicator'
+import { ToastProvider } from '@/components/helpers/ToastProvider'
 
 export const metadata = {
   title: 'Luka Brkovic',
@@ -22,12 +23,14 @@ export default function RootLayout({
         />
       </head>
       <body className='bg-page-gradient'>
+      <ToastProvider>
       <Navbar />
       <main className="pt-navigation-height ">
       {children}
       </main>
       <Footer />
       <TailwindIndicator />
+      </ToastProvider>
       </body>
     </html>
   )

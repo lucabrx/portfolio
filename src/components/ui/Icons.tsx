@@ -1,10 +1,11 @@
-import { type Icon as LucideIcon,  LucideProps, ChevronLeft, ChevronRight,  } from 'lucide-react';
+import { type Icon as LucideIcon,  LucideProps, ChevronLeft, ChevronRight, AlertCircleIcon,  } from 'lucide-react';
 
 export type Icon = LucideIcon;
 
 export const Icons = {
   left: ChevronLeft,
   right: ChevronRight,
+  alert: AlertCircleIcon,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

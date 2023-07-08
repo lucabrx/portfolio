@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { ReactNode, type FC, HTMLAttributes } from 'react';
 import { cva, VariantProps } from "class-variance-authority";
+import { Loader2 } from 'lucide-react';
+import ShouldRender from '../helpers/ShouldRender';
 
 
 export const buttonClasses = cva(" rounded-md inline-flex items-center justify-center cursor-pointer", {
@@ -26,11 +28,14 @@ export const buttonClasses = cva(" rounded-md inline-flex items-center justify-c
   });
 interface ButtonProps extends VariantProps<typeof buttonClasses>, HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
+  isLoading? : boolean;
+  disabled?  : boolean;
 }
 
-const Button: FC<ButtonProps> = ({children,variant,size,className,...props}) => {
+const Button: FC<ButtonProps> = ({isLoading,disabled,children,variant,size,className,...props}) => {
   return (
-<button {...props} className={buttonClasses({variant,size,className})}> 
+<button disabled={disabled} {...props} className={buttonClasses({variant,size,className})}> 
+<ShouldRender if={isLoading}> <Loader2 className='w-4 h-4 animate-spin'/> </ShouldRender>
 {children}
 </button>
 )

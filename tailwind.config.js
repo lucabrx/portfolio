@@ -152,6 +152,10 @@ module.exports = {
             "90%": { opacity: 1 },
             "100%": { opacity: 0, transform: "translateY(min(21vw, 45rem))" },
           },
+          "animate-circle": {
+            from: { transform: "rotate(0deg)" },
+            to: { transform: "rotate(360deg)" },
+          }
         
       },
         animation: {
@@ -161,6 +165,7 @@ module.exports = {
           "sketch-lines": "sketch-lines 1200ms ease-out forwards",
           "glow-line-horizontal": "glow-line-horizontal var(--animation-duration) ease-in forwards",
           "glow-line-vertical": "glow-line-vertical var(--animation-duration) ease-in forwards",
+          "animate-spin": "animate-circle 1000ms linear infinite",
         }
   },
   plugins: [],
