@@ -1,7 +1,9 @@
-import { cn } from '@/lib/classMerge';
 import { type FC } from 'react';
 import { type FieldError } from 'react-hook-form';
-import ShouldRender from '../helpers/ShouldRender';
+
+import { cn } from '@/lib/classMerge';
+
+import ShouldRender from '@/components/helpers/ShouldRender';
 
 interface FieldProps {
     children: React.ReactNode;

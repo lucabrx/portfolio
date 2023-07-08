@@ -1,11 +1,11 @@
 "use client"
 import {type FC, useState } from 'react';
-import Accordion from '../ui/Accordion';
-
 import { useInView } from 'react-intersection-observer';
-import { cn } from '@/lib/classMerge';
-import { frontendTools,backendTools,designTools } from '../../../config/tools';
 
+import { frontendTools,backendTools,designTools } from '@/config/tools';
+import { cn } from '@/lib/classMerge';
+
+import Accordion from '@/components/ui/Accordion';
 
 const accordions = [
   { title: '💅 Frontend', content: (<div className='flex flex-col space-y-2 justify-center items-start'>

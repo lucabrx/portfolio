@@ -1,30 +1,15 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, type FC, useEffect } from 'react';
-import Button from './ui/Button';
 import { Menu, X } from 'lucide-react';
-import ShouldRender from './helpers/ShouldRender';
-import { Facebook, Github, Instagram, Send } from 'lucide-react';
+import { useState, type FC, useEffect } from 'react';
 
-interface HeaderProps {
-  
-}
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/' },
-  { name: 'Projects', href: '/' },
-  { name: 'Contact', href: '/' },
-]
+import { navigation } from '@/config/navbar';
 
-const socials = [
-  { name: 'Facebook', href: '/', icon: <Facebook size="20" /> },
-  { name: 'Github', href: '/', icon: <Github size="20" /> },
-  { name: 'Instagram', href: '/', icon: <Instagram size="20" /> },
-  { name: 'Email', href: '/', icon: <Send size="20" /> },
-]
+import Button from '@/components/ui/Button';
+import ShouldRender from '@/components/helpers/ShouldRender';
 
-const Navbar: FC<HeaderProps> = ({}) => {
+const Navbar: FC = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -43,6 +28,7 @@ setIsOpen(!isOpen)
   return (
 <header className={`fixed top-0 left-0 w-full z-20  ${isOpen ? "bg-background" : "backdrop-blur-[12px] bg-transparent border-transparent-white border-b"}`}> 
 <div className="flex py-2 h-[56px] items-center justify-between container">
+<div className='flex gap-4 items-center justify-center'>
 <Link className='flex items-center' href='/'>
   <Image src='/logo.svg' alt='logo' width={32} height={32} />
 </Link>
@@ -57,18 +43,11 @@ setIsOpen(!isOpen)
     ))
   }
 </nav>
+</div>
 
 <div className='flex justify-center items-center gap-2'>
 
-<div className="hidden md:flex space-x-2 text-off-white">
-          {
-            socials.map(({name, href, icon}, i) => (
-              <Button variant="secondary" size="icon_sm"  key={i}>
-                {icon}
-              </Button>
-            ))
-          }
-        </div>
+<Button size="md" className='hidden md:block'>Contact me</Button>
 
 <button onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
 {isOpen?  <X className='w-8 h-8' /> : <Menu className='w-8 h-8' />}

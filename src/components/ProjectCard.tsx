@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { type FC } from 'react';
-import Badge from './ui/Badge';
-import  { buttonClasses } from './ui/Button';
-import { Icons } from './ui/Icons';
-import { Project } from '../../config/projects';
+
+import { Project } from '@/config/projects';
+
+import Badge from '@/components/ui/Badge';
+import  { buttonClasses } from '@/components/ui/Button';
+import { Icons } from '@/components/ui/Icons';
 
 interface ProjectCardProps {
     project: Project

@@ -1,10 +1,11 @@
 "use client"
 import {  type FC } from 'react';
-
 import { useInView } from 'react-intersection-observer';
-import { cn } from '@/lib/classMerge';
 import Image from 'next/image';
-import ContactForm from '../ContactForm';
+
+import { cn } from '@/lib/classMerge';
+
+import ContactForm from '@/components/ContactForm';
 
 
 const ContactSection: FC = () => {

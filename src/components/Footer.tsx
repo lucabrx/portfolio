@@ -1,13 +1,10 @@
 import { type FC } from 'react';
 import Image from 'next/image';
-import { Facebook, Github, Instagram, Send } from 'lucide-react';
-import IconContainer from './ui/IconContainer';
 
-interface FooterProps {
-  
-}
+import Button from '@/components/ui/Button';
+import { Icons } from '@/components/ui/Icons';
 
-const Footer: FC<FooterProps> = ({}) => {
+const Footer: FC = () => {
   return (
     <footer className="border-t border-transparent-white py-4 text-sm">
     <div className="flex flex-col justify-between lg:flex-row container">
@@ -17,18 +14,18 @@ const Footer: FC<FooterProps> = ({}) => {
              Luka Brkovic
           </div>
           <div className="mt-auto flex space-x-2 text-grey">
-           <IconContainer>
-            <Send size="20" />
-            </IconContainer>
-           <IconContainer>
-            <Facebook size="20" />
-            </IconContainer>
-           <IconContainer>
-            <Github size="20" />
-            </IconContainer>
-           <IconContainer>
-           <Instagram size="20" />
-           </IconContainer>
+          <Button variant="icon" size="icon_md">
+            <Icons.tg size="20" />
+            </Button>
+            <Button variant="icon" size="icon_md">
+            <Icons.facebook size="20" />
+            </Button>
+            <Button variant="icon" size="icon_md">
+            <Icons.gitHub size="20" />
+            </Button>
+            <Button variant="icon" size="icon_md">
+           <Icons.instagram size="20" />
+           </Button>
           </div>
         </div>
     </div>

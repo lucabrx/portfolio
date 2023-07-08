@@ -1,10 +1,12 @@
 "use client"
-import { cn } from '@/lib/classMerge';
 import { useRef, type FC } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Icons } from '../ui/Icons';
-import ProjectCard from '../ProjectCard';
-import { projects } from '../../../config/projects';
+
+import { cn } from '@/lib/classMerge';
+import { projects } from '@/config/projects';
+
+import { Icons } from '@/components/ui/Icons';
+import ProjectCard from '@/components/ProjectCard';
 
 const ProjectsSection: FC = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);

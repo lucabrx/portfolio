@@ -1,8 +1,10 @@
 import { type FC } from 'react';
+import Link from 'next/link'
+
+import { cn } from '@/lib/classMerge'
+
 import  { buttonClasses } from '@/components/ui/Button'
 import HomeImage from '@/components/HomeImage'
-import { cn } from '@/lib/classMerge'
-import Link from 'next/link'
 
 
 const HeroSection: FC = ({}) => {

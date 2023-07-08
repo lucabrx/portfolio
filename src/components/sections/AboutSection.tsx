@@ -1,8 +1,9 @@
 "use client"
-import { cn } from '@/lib/classMerge';
 import Image from 'next/image';
 import { type FC } from 'react';
 import { useInView } from 'react-intersection-observer';
+
+import { cn } from '@/lib/classMerge';
 
 const AboutSection: FC = () => {
   const {ref, inView} = useInView({

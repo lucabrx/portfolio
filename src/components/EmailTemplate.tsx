@@ -1,10 +1,11 @@
-import * as React from "react";
+import { FC } from "react";
 
+//TODO - add email template (it is for me but still)
 interface EmailTemplateProps {
   firstName: string;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
+export const EmailTemplate: FC<Readonly<EmailTemplateProps>> = ({
   firstName,
 }) => (
   <div>
