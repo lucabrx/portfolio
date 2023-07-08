@@ -6,16 +6,16 @@ interface AboutText {
 
 export const text: AboutText[] = [
     {
-        text:"👋  Hello my Name is Luka Brkovic, I&apos;am 26years old Javascript developer."
+        text:"👋  Hello my Name is Luka Brkovic, I'am 26years old Javascript developer."
     },
     {
-        text:"🏠 Currently living in Germany. but I&apos;m originally from Croatia."
+        text:"🏠 Currently living in Germany. but I'am originally from Croatia."
     },
     {
-        text:"🎓 I&apos;m a self-taught developer, I started learning programming in 2022. Focus on Frontend development and Design, but I also have some experience with backend."
+        text:"🎓 I'am a self-taught developer, I started learning programming in 2022. Focus on Frontend development and Design, but I also have some experience with backend."
     },
     {
-        text:"📚 I&apos;m always learning new things, and I&apos;m always open to new opportunities."
+        text:"📚 I'am always learning new things, and I'am always open to new opportunities."
     },
     {
         text:"🏃‍♂️ I like to do sports, watch and listen podcasts, and spend time with my friends."
@@ -27,9 +27,9 @@ export const text: AboutText[] = [
 
 export const textHidden: AboutText[] = [
     {
-        text: "🤖 I&apos;m a big fan of technology, and I like to try out new things."
+        text: "🤖 I'am a big fan of technology, and I like to try out new things."
     },
     {
-       text: "🧑‍💻 I&apos;m currently open for new opportunities, so if you&apos;re interested in working with me, feel free to contact me." 
+       text: "🧑‍💻 I'am currently open for new opportunities, so if you&apos;re interested in working with me, feel free to contact me." 
     }
 ]

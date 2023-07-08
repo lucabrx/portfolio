@@ -35,7 +35,7 @@ const AboutSection: FC = () => {
 }
 {
   textHidden.map((item, index) => (
-    <TextContainer key={index}>
+    <TextContainer className='hidden lg:block' key={index}>
       {item.text}
     </TextContainer>
   ))
