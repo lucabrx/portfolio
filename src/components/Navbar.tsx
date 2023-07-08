@@ -5,7 +5,6 @@ import { useState, type FC, useEffect } from 'react';
 import Button from './ui/Button';
 import { Menu, X } from 'lucide-react';
 import ShouldRender from './helpers/ShouldRender';
-import { motion } from 'framer-motion';
 import { Facebook, Github, Instagram, Send } from 'lucide-react';
 
 interface HeaderProps {
@@ -76,11 +75,7 @@ setIsOpen(!isOpen)
 </button>
 
 <ShouldRender if={isOpen}>
-<motion.div 
- initial={{opacity: 0, y: 0}}
- animate={{opacity: 1, y: 0}} 
- exit={{opacity: 0, y: 0}} 
- transition={{duration: 0.5}}
+<div 
 className='absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x-0'>
 <div className='flex flex-col space-y-2 py-4 '>
   {
@@ -91,7 +86,7 @@ className='absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x
     ))
   }
 </div>
-</motion.div>
+</div>
 </ShouldRender>
 </div>
 </div>
