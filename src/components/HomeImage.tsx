@@ -20,7 +20,7 @@ const HomeImage: FC = () => {
   <Image src="/projects/chatnik-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>
-  <div className='absolute  aspect-video w-[calc(45%)] -top-10 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md '>
+  <div className='absolute  aspect-video w-[calc(45%)] -top-6 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient  rounded-md '>
   <Image src="/projects/quanta-full.png" alt="Picture of the author" fill  
   className='rounded-md delay-[650ms]' /> 
   </div>

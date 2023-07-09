@@ -33,7 +33,7 @@ const ProjectsSection: FC = () => {
   return (
 <div ref={ref} className='mt-6 md:mt-10 lg:mt-16 container'> 
 <h2 className={cn("w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0", inView ? "animate-fade-in" : "")}>My Projects👨‍💻</h2>
-<div className="flex gap-6 overflow-x-auto mt-6 hide-scrollbar relative  ">
+<div className="flex gap-6 overflow-x-auto mt-6 hide-scrollbar relative">
 <div ref={scrollContainerRef}  
 className={cn("flex gap-4 md:gap-7 overflow-x-scroll px-5 md:px-0 py-6 hide-scrollbar opacity-0 transition-transform transform", inView ? "animate-fade-in [--animation-delay:300ms]" : "")}>
     {
@@ -42,11 +42,11 @@ className={cn("flex gap-4 md:gap-7 overflow-x-scroll px-5 md:px-0 py-6 hide-scro
         ))
     }
 </div>
-<button className={cn('absolute z-30 top-1/2 left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms] " : "")} 
+<button className={cn('absolute z-30 top-[45%] left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms] " : "")} 
 onClick={() => handleScroll(-100)}>
 <Icons.left className='h-7' />
 </button>
-<button className={cn('absolute z-30 top-1/2 right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms]" : "")} 
+<button className={cn('absolute z-30 top-[45%] right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block', inView ? "animate-fade-in [--animation-delay:300ms]" : "")} 
 onClick={() => handleScroll(100)}>
 <Icons.right className='h-7' />
 </button>
