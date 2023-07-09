@@ -26,7 +26,7 @@ const ProjectCard: FC<ProjectCardProps> = ({project}) => {
     <Image src={project.image} alt={project.title} fill sizes="100%" />
     <div className='bg-glass-gradient absolute inset-0' /> 
     </div>
-    <div className='px-4'>
+    <div className='px-4 flex flex-col justify-between h-fit'>
     <h2 className='text-xl text-off-white md:text-2xl '>
     {project.title}
     </h2>
@@ -34,7 +34,7 @@ const ProjectCard: FC<ProjectCardProps> = ({project}) => {
     {project.description}
     </p>
 
-    <div className='flex gap-3 w-full justify-end mt-4'>
+    <div className='flex gap-3 w-full justify-end mt-4 '>
         <a href={project.github} className={buttonClasses({
             variant: "github",
             size: 'md',
