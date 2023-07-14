@@ -61,5 +61,25 @@ export const projects: Project[] = [
         link: "https://wd-tool.vercel.app/",
         mainBadge: "Next.js",
         badges: [ "Typescript", "TailwindCSS", "Planetscale", "Drizzle"]
+    },
+    {
+        id: 6,
+        title: "Daflix - Netflix Clone (better clone)",
+        description: "Netflix clone with a login form and a movie page with few movies.",
+        image: "/projects/daflix-full.png",
+        github: "https://github.com/lucabrx/daflix",
+        badges: [ "Typescript", "TailwindCSS", "Prisma", "CockroachDB"],
+        link:"https://daflix-nine.vercel.app/",
+        mainBadge: "Next.js",
+    },
+    {
+        id: 7,
+        title: "Airbnb Clone - Reservation App",
+        description: "Airbnb clone with a login form and a reservation page with few houses.",
+        image: "/projects/airbnb-full.png",
+        github: "https://github.com/lucabrx/airbnb-clone",
+        link: "https://airbnb-clone-zeta-lime.vercel.app/",
+        mainBadge: "Next.js",
+        badges: [ "Typescript", "TailwindCSS", "Prisma"]
     }
 ]

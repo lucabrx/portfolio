@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { TailwindIndicator } from '@/components/helpers/TailwindIndicator'
 import { ToastProvider } from '@/components/helpers/ToastProvider'
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = headConfig
 
@@ -29,7 +30,8 @@ export default function RootLayout({
       {children}
       </main>
       <Footer />
-      <TailwindIndicator />
+          <ScrollToTop />
+          <TailwindIndicator />
       </ToastProvider>
       </body>
     </html>

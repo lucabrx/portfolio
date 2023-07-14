@@ -52,7 +52,7 @@ const ContactForm: FC = () => {
 
   return (
   
-    <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-4'>
+    <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-4 flex flex-col'>
         <Field label="Name" error={errors.name} className='relative'>
         {errors.name && <Icons.alert className='w-5 h-5 absolute right-3 top-[35px] text-[#dc2626]'/>}
         <input type="text" placeholder="Yana Doe" {...register('name')}
@@ -72,7 +72,10 @@ const ContactForm: FC = () => {
         />
         </Field>
        
-        <Button isLoading={loading} disabled={loading} className='w-full'  size="lg">Send</Button>
+        <Button isLoading={loading} disabled={loading} className='w-full md:w-auto md:self-end '  size="lg">
+        ✍️
+        Send Message
+        </Button>
     </form>
  
 )
