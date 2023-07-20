@@ -1,16 +1,12 @@
-import { ReactNode, type FC } from 'react';
+import { ReactNode, type FC } from "react";
 
 interface ShouldRenderProps {
   if: unknown;
   children: ReactNode;
 }
 
-const ShouldRender: FC<ShouldRenderProps> = ({if:condition, children}) => {
-  return (
-<> 
-{condition ? children : null}
-</>
-)
-}
+const ShouldRender: FC<ShouldRenderProps> = ({ if: condition, children }) => {
+  return <>{condition ? children : null}</>;
+};
 
-export default ShouldRender
+export default ShouldRender;

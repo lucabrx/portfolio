@@ -1,8 +1,8 @@
-import  { useState, useEffect, type FC } from 'react';
+import { useState, useEffect, type FC } from "react";
 
 interface ToastProps {
-    message: string;
-    duration: number;
+  message: string;
+  duration: number;
 }
 const Toast: FC<ToastProps> = ({ message, duration }) => {
   const [isVisible, setIsVisible] = useState(true);

@@ -4,18 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    font-family: "montserrat", sans-serif;
+  font-family: "montserrat", sans-serif;
 }
 .rotate-20 {
-  transform:   rotateY(15deg) rotateX(-15deg);
+  transform: rotateY(15deg) rotateX(-15deg);
   transform-style: preserve-3d;
   perspective: 1000px;
   perspective-origin: 50% 50%;
 }
-.rotate-20:hover{
-  transform:   rotateY(0deg) rotateX(0deg);
+.rotate-20:hover {
+  transform: rotateY(0deg) rotateX(0deg);
   transform: scale(1.05);
   transform-style: preserve-3d;
   transition: all 0.3s ease-in;
@@ -24,12 +23,12 @@ body {
 }
 @media (max-width: 768px) {
   .rotate-20 {
-    transform:   rotateY(15deg) rotateX(-20deg);
+    transform: rotateY(15deg) rotateX(-20deg);
     transform-style: preserve-3d;
     perspective: 1000px;
     perspective-origin: 50% 50%;
   }
-  .rotate-20:hover{
+  .rotate-20:hover {
     transform: scale(1.02);
   }
 }
@@ -38,9 +37,9 @@ body {
   :root {
     --navigation-height: 4.8rem;
   }
-    html {
-      @apply bg-background  text-off-white;
-    }
+  html {
+    @apply bg-background  text-off-white;
+  }
 }
 
 @layer utilities {
@@ -49,21 +48,28 @@ body {
   }
 
   .text-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
     background-clip: text;
     color: transparent;
   }
 
   .mask-radial-faded {
-    mask-image: radial-gradient(circle at center center, black, transparent 80%)
+    mask-image: radial-gradient(
+      circle at center center,
+      black,
+      transparent 80%
+    );
   }
 
   .mask-linear-faded {
-    mask-image: linear-gradient(black, transparent 70%)
+    mask-image: linear-gradient(black, transparent 70%);
   }
 
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
 }
