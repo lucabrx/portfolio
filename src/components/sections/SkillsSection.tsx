@@ -76,7 +76,11 @@ const SkillsSection: FC = ({}) => {
   };
 
   return (
-    <div ref={ref} className="mt-[100px] md:mt-[140px] lg:mt-[160px] container">
+    <div
+      id="skills-section"
+      ref={ref}
+      className="mt-[100px] md:mt-[140px] lg:mt-[160px] container"
+    >
       <h2
         className={cn(
           "w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0",

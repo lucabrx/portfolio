@@ -32,7 +32,11 @@ const ProjectsSection: FC = () => {
   }
 
   return (
-    <div ref={ref} className="mt-6 md:mt-10 lg:mt-16 container">
+    <div
+      id="projects-section"
+      ref={ref}
+      className="mt-6 md:mt-10 lg:mt-16 container"
+    >
       <h2
         className={cn(
           "w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0",

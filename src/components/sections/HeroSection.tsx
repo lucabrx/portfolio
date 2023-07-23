@@ -1,15 +1,16 @@
+"use client";
 import { type FC } from "react";
-import Link from "next/link";
-
-import { cn } from "@/lib/classMerge";
-
-import { buttonClasses } from "@/components/ui/Button";
+import Button from "@/components/ui/Button";
 import HomeImage from "@/components/HomeImage";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const HeroSection: FC = () => {
   return (
-    <div className="w-full overflow-hidden  flex flex-col justify-center items-center p-4 pt-navigation-height  ">
-      <div className="grid grid-cols-1 md:grid-cols-[56%,40%] container md:gap-7">
+    <div
+      id="home-section"
+      className="w-full overflow-hidden  flex flex-col justify-center items-center p-4 pt-navigation-height  "
+    >
+      <div className="grid grid-cols-1 md:grid-cols-[56%,40%] container md:gap-7 xl:mt-10 ">
         <div className="flex flex-col justify-center items-center md:-mt-28">
           <h1 className=" mb-1 animate-fade-in opacity-0  text-5xl leading-[42px] text-left w-full lg:leading-[58px] lg:text-[56px]">
             {" "}
@@ -18,7 +19,7 @@ const HeroSection: FC = () => {
               Luka Brkovic,
             </span>
             <span className="hidden lg:inline-block">
-              a self tought developer
+              a self taught developer
             </span>
             <br className="md:hidden" />
             <span className="ml-1 lg:hidden"> web developer</span>
@@ -36,9 +37,12 @@ const HeroSection: FC = () => {
           </h3>
 
           <div className="animate-fade-in [--animation-delay:400ms] opacity-0 mt-4 self-start   md:mt-4">
-            <Link className={cn(buttonClasses({ size: "lg" }))} href="/">
+            <Button
+              size="lg"
+              onClick={(e) => scrollToSection(e, "contact-section", 0)}
+            >
               Contact 👋
-            </Link>
+            </Button>
           </div>
         </div>
 

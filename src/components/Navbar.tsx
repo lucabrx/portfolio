@@ -8,12 +8,15 @@ import { navigation } from "@/config/navbar";
 
 import Button from "@/components/ui/Button";
 import ShouldRender from "@/components/helpers/ShouldRender";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Navbar: FC = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  //TODO mobile links
+
   useEffect(() => {
-    if (isOpen === true) {
+    if (isOpen) {
       document.body.style.overflow = "HIDDEN";
     }
     return () => {
@@ -40,20 +43,24 @@ const Navbar: FC = ({}) => {
           </Link>
 
           <nav className="hidden md:flex">
-            {navigation.map(({ name, href }, i) => (
-              <Link
-                href={href}
+            {navigation.map(({ name, section, offset }, i) => (
+              <button
+                onClick={(e) => scrollToSection(e, section, offset)}
                 key={i}
                 className="text-lg ml-6 hover:text-grey transition-colors"
               >
                 {name}
-              </Link>
+              </button>
             ))}
           </nav>
         </div>
 
         <div className="flex justify-center items-center gap-2">
-          <Button size="md" className="hidden md:block">
+          <Button
+            onClick={(e) => scrollToSection(e, "contact-section", 0)}
+            size="md"
+            className="hidden md:block"
+          >
             Contact me
           </Button>
 
@@ -64,10 +71,10 @@ const Navbar: FC = ({}) => {
           <ShouldRender if={isOpen}>
             <div className="absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x-0">
               <div className="flex flex-col space-y-2 py-4 ">
-                {navigation.map(({ name, href }, i) => (
+                {navigation.map(({ name, section }, i) => (
                   <Link
                     onClick={handleClick}
-                    href={href}
+                    href="/"
                     key={i}
                     className="text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark"
                   >

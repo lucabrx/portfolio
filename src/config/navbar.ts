@@ -1,10 +1,11 @@
 export interface Navigation {
   name: string;
-  href: string;
+  section: string;
+  offset: number;
 }
 export const navigation: Navigation[] = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/" },
-  { name: "Projects", href: "/" },
-  { name: "Contact", href: "/" },
+  { name: "Home", section: "home-section", offset: 0 },
+  { name: "Skills", section: "skills-section", offset: -250 },
+  { name: "Projects", section: "projects-section", offset: -150 },
+  { name: "About", section: "about-section", offset: 250 },
 ];

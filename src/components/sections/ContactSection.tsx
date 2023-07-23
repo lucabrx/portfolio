@@ -14,7 +14,7 @@ const ContactSection: FC = () => {
   });
   return (
     <>
-      <div ref={ref} className="w-full  md:mt-8  ">
+      <div id="contact-section" ref={ref} className="w-full  md:mt-8  ">
         <h2
           className={cn(
             "w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0 pt-8 pb-4",
