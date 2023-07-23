@@ -11,7 +11,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 5,
+    id: 4,
     title: "Quanta Ai - AI Powerful Tools",
     description: "AI generated tools with OpenAI, Image,Code,Text and more.",
     image: "/projects/quanta-v2-full.png",

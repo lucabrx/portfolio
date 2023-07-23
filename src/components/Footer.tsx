@@ -1,73 +1,81 @@
 "use client";
-import { type FC } from "react";
+import { type FC, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { buttonClasses } from "@/components/ui/Button";
 import { socialApps } from "@/config/social-app";
 
-// tooltip
-let tooltip: HTMLDivElement;
-
-document.addEventListener("mouseover", showTooltip);
-document.addEventListener("mouseout", hideTooltip);
-
-function showTooltip(event: MouseEvent) {
-  let target = event.target as HTMLAnchorElement;
-  let tooltipData = getTooltipData(target);
-  if (!tooltipData) return;
-
-  tooltip = document.createElement("div");
-  tooltip.classList.add(
-    "px-4",
-    "py-2",
-    "bg-grey-dark",
-    "rounded-md",
-    "text-off-white/80",
-    "text-[14px]",
-    "shadow",
-    "fixed",
-    "z-10",
-    "transition",
-    "duration-300",
-  );
-  tooltip.innerHTML = tooltipData;
-  document.body.append(tooltip);
-
-  let targetRect = target.getBoundingClientRect();
-  let tooltipRect = tooltip.getBoundingClientRect();
-
-  let left = targetRect.left + (targetRect.width - tooltipRect.width) / 2;
-  if (left < 0) left = 0;
-  if (left + tooltipRect.width > window.innerWidth) {
-    left = window.innerWidth - tooltipRect.width;
-  }
-
-  let top = targetRect.top - tooltipRect.height - 15;
-  if (top < 0) {
-    top = targetRect.bottom + 15;
-  }
-
-  tooltip.style.left = left + "px";
-  tooltip.style.top = top + "px";
-}
-
-function getTooltipData(element: HTMLElement): string | null {
-  if (element.dataset.tooltip) {
-    return element.dataset.tooltip;
-  } else if (element.parentElement) {
-    return getTooltipData(element.parentElement);
-  } else {
-    return null;
-  }
-}
-
-function hideTooltip() {
-  if (!tooltip) return;
-  if (tooltip) {
-    tooltip.remove();
-  }
-}
-
 const Footer: FC = () => {
+  const tooltipRef = useRef<HTMLDivElement | null>(null);
+
+  const getTooltipData = useCallback((element: HTMLElement): string | null => {
+    if (element.dataset.tooltip) {
+      return element.dataset.tooltip;
+    } else if (element.parentElement) {
+      return getTooltipData(element.parentElement);
+    } else {
+      return null;
+    }
+  }, []);
+
+  const showTooltip = useCallback(
+    (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const tooltipData = getTooltipData(target);
+      if (!tooltipData) return;
+
+      const tooltip = document.createElement("div");
+      tooltip.classList.add(
+        "px-4",
+        "py-2",
+        "bg-grey-dark",
+        "rounded-md",
+        "text-off-white/80",
+        "text-sm",
+        "shadow",
+        "fixed",
+        "z-10",
+      );
+      tooltip.innerHTML = tooltipData;
+      document.body.append(tooltip);
+
+      const targetRect = target.getBoundingClientRect();
+      const tooltipRect = tooltip.getBoundingClientRect();
+
+      let left = targetRect.left + (targetRect.width - tooltipRect.width) / 2;
+      if (left < 0) left = 0;
+      if (left + tooltipRect.width > window.innerWidth) {
+        left = window.innerWidth - tooltipRect.width;
+      }
+
+      let top = targetRect.top - tooltipRect.height - 20;
+      if (top < 0) {
+        top = targetRect.bottom + 20;
+      }
+
+      tooltip.style.left = left + "px";
+      tooltip.style.top = top + "px";
+
+      tooltipRef.current = tooltip;
+    },
+    [getTooltipData],
+  );
+
+  const hideTooltip = useCallback(() => {
+    if (tooltipRef.current) {
+      tooltipRef.current.remove();
+      tooltipRef.current = null;
+    }
+  }, [tooltipRef]);
+
+  useEffect(() => {
+    document.addEventListener("mouseover", showTooltip);
+    document.addEventListener("mouseout", hideTooltip);
+    return () => {
+      document.removeEventListener("mouseover", showTooltip);
+      document.removeEventListener("mouseout", hideTooltip);
+    };
+  }, [showTooltip, hideTooltip]);
+
   return (
     <footer className="border-t border-transparent-white py-4 text-sm">
       <div className="flex flex-col justify-between lg:flex-row container">
@@ -77,9 +85,9 @@ const Footer: FC = () => {
             Luka Brkovic
           </div>
           <div className="mt-auto flex space-x-2 text-grey">
-            {socialApps.map((item, i) => (
+            {socialApps.map((item) => (
               <a
-                key={i}
+                key={item.id}
                 data-tooltip={item.tooltip}
                 href={item.href}
                 className={buttonClasses({
@@ -87,7 +95,7 @@ const Footer: FC = () => {
                   size: "icon_md",
                 })}
               >
-                <item.Icon size="20" />
+                <item.Icon size={20} />
               </a>
             ))}
           </div>
