@@ -8,6 +8,7 @@ import {
   Github,
   Instagram,
   Send,
+  Linkedin,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -18,7 +19,7 @@ export const Icons = {
   alert: AlertCircleIcon,
   facebook: Facebook,
   gitHub: Github,
-  instagram: Instagram,
+  linkedin: Linkedin,
   tg: Send,
   react: ({ ...props }: LucideProps) => (
     <svg

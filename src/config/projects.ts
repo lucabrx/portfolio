@@ -11,7 +11,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: 5,
+    title: "Quanta Ai - AI Powerful Tools",
+    description: "AI generated tools with OpenAI, Image,Code,Text and more.",
+    image: "/projects/quanta-v2-full.png",
+    link: "https://quanta-ai-next.vercel.app/",
+    github: "https://github.com/lucabrx/quanta-ai-next",
+    mainBadge: "Next.js",
+    badges: ["Typescript", "TailwindCSS", "OpenAI", "Drizzle"],
+  },
+  {
+    id: 5,
     title: "Vox Populi Blog-News Portal...",
     description: "Uploading images, rich markdown editor, comments and more.",
     image: "/projects/vox-populi-full.png",
@@ -21,7 +31,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "MySQL"],
   },
   {
-    id: 3,
+    id: 6,
     title: "Icon AI - AI Dall-E Generated",
     description:
       "AI generated icons with Dall-E API and tRPC for full type safety.",
@@ -32,7 +42,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "tRPC", "Prisma"],
   },
   {
-    id: 4,
+    id: 7,
     title: "Fitness Trainer Homepage - JD",
     description:
       "Fitness trainer homepage with a login form, it will be updated later.",
@@ -43,7 +53,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "Prisma"],
   },
   {
-    id: 5,
+    id: 8,
     title: "Chatnik - Chat App with Socket",
     description:
       "Chat app with a login form and a chat page with socket (pusher).",
@@ -54,7 +64,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "PusherAPI", "Redis", "TailwindCSS"],
   },
   {
-    id: 6,
+    id: 9,
     title: "Web Dev Tools and Favorites list",
     description:
       "Web dev tools for design and coding, planetscale and drizzle.",
@@ -65,7 +75,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "Planetscale", "Drizzle"],
   },
   {
-    id: 7,
+    id: 10,
     title: "Airbnb Clone - Reservation App",
     description:
       "Airbnb clone with a login form and a reservation page with few houses.",
@@ -76,7 +86,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "Prisma"],
   },
   {
-    id: 8,
+    id: 11,
     title: "Quanta - Daily production tracker",
     description:
       "Quanta is a daily production tracker for a personal use and more.",
@@ -87,7 +97,7 @@ export const projects: Project[] = [
     badges: ["Typescript", "TailwindCSS", "Supabase"],
   },
   {
-    id: 8,
+    id: 12,
     title: "Daflix - Netflix Clone (better clone)",
     description:
       "Netflix clone with a login form and a movie page with few movies.",
