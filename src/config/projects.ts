@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Quanta Ai - AI Powerful Tools",
     description: "AI generated tools with OpenAI, Image,Code,Text and more.",
-    image: "/projects/quanta-v2-full.png",
+    image: "/projects/quanta-v3-full.png",
     link: "https://quanta-ai-next.vercel.app/",
     github: "https://github.com/lucabrx/quanta-ai-next",
     mainBadge: "Next.js",

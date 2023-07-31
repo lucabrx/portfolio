@@ -14,7 +14,7 @@ const AboutSection: FC = () => {
     threshold: 0.5,
   });
   return (
-    <div id="about-section" className=" mt-16 md:mt-24 ">
+    <div id="about-section " className=" mt-16 md:mt-24 ">
       <div
         className="  mask-radial-faded pointer-events-none relative -z-[20] -my-[520px] md:-my-[570px] h-[960px] overflow-hidden
           [--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]

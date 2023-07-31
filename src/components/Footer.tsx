@@ -46,7 +46,6 @@ const Footer: FC = () => {
       if (left + tooltipRect.width > window.innerWidth) {
         left = window.innerWidth - tooltipRect.width;
       }
-
       let top = targetRect.top - tooltipRect.height - 20;
       if (top < 0) {
         top = targetRect.bottom + 20;

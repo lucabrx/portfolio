@@ -8,11 +8,11 @@ const HeroSection: FC = () => {
   return (
     <div
       id="home-section"
-      className="w-full overflow-hidden  flex flex-col justify-center items-center p-4 pt-navigation-height  "
+      className="pb-28 md:pb-0 w-full overflow-hidden  flex flex-col justify-center items-center p-4 pt-navigation-height"
     >
       <div className="grid grid-cols-1 md:grid-cols-[56%,40%] container md:gap-7 xl:mt-10 ">
-        <div className="flex flex-col justify-center items-center md:-mt-28">
-          <h1 className=" mb-1 animate-fade-in opacity-0  text-5xl leading-[42px] text-left w-full lg:leading-[58px] lg:text-[56px]">
+        <div className="flex flex-col justify-center items-center mt-6  md:-mt-28">
+          <h1 className=" mb-1 animate-fade-in opacity-0 text-4xl  xs:text-5xl leading-[42px] md:text-3xl md:mb-0 text-left w-full xl:leading-[58px] xl:text-[56px] lg:text-[44px] lg:leading-[48px]">
             {" "}
             Hello, I&apos;m <br className="md:hidden" />
             <span className="text-transparent bg-clip-text bg-title-gradient ">
@@ -25,7 +25,7 @@ const HeroSection: FC = () => {
             <span className="ml-1 lg:hidden"> web developer</span>
           </h1>
 
-          <h3 className="animate-fade-in max-w-[850px] [--animation-delay:200ms] opacity-0   mt-2 md:mt-4 text-lg  w-full text-left">
+          <h3 className="animate-fade-in  [--animation-delay:200ms] opacity-0   mt-2 lg:mt-4 xs:text-lg md:text-sm lg:text-md xl:text-lg w-full text-left ">
             Welcome to my portfolio, where you&apos;ll find a collection of my
             projects that demonstrate my skills and expertise. {"  "}
             <span className="hidden md:inline-block">
@@ -46,7 +46,7 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div className="animate-fade-in [--animation-delay:700ms] opacity-0  mt-6 md:mt-8 lg:mt-12">
+        <div className="hidden md:block animate-fade-in [--animation-delay:700ms] opacity-0  mt-6 md:mt-8 lg:mt-12">
           <HomeImage />
         </div>
       </div>

@@ -6,6 +6,8 @@ import { frontendTools, backendTools, designTools } from "@/config/tools";
 import { cn } from "@/lib/classMerge";
 
 import Accordion from "@/components/ui/Accordion";
+import TextContainer from "@/components/ui/TextContainer";
+import { skillsText } from "@/config/skills-section";
 
 const accordions = [
   {
@@ -91,20 +93,25 @@ const SkillsSection: FC = ({}) => {
       </h2>
       <p
         className={cn(
-          "text-center mt-4 text-off-white/80 container opacity-0",
+          "text-center lg:hidden mt-4 text-off-white/80 container opacity-0",
           inView ? "animate-fade-in [--animation-delay:200ms]" : "",
         )}
       >
         I&apos;m a passionate junior frontend developer with a keen eye for
         design and a strong desire to create engaging user experiences.
       </p>
-      <div className="pt-7 grid grid-cols-1 lg:grid-cols-2 gap-7">
+
+      <div className="pt-7 grid grid-cols-1 lg:grid-cols-2 gap-7 ">
         <div
           className={cn(
-            "aspect-video w-full bg-transparent-white flex justify-center items-center  opacity-0 ",
+            "hidden pt-4 flex-col lg:flex  space-y-2 md:space-y-4  w-full    opacity-0 ",
             inView ? "animate-fade-in [--animation-delay:400ms]" : "",
           )}
-        ></div>
+        >
+          {skillsText.map((text, index) => (
+            <TextContainer key={index}>{text}</TextContainer>
+          ))}
+        </div>
         <div
           className={cn(
             "md:space-y-2 opacity-0",
