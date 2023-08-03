@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { TailwindIndicator } from "@/components/helpers/TailwindIndicator";
 import { ToastProvider } from "@/components/helpers/ToastProvider";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = headConfig;
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+            <Analytics />
           <TailwindIndicator />
         </ToastProvider>
       </body>

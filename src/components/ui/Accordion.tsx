@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import React, { ReactNode, useState } from "react";
+import type { FC, ReactNode } from "react";
 
 interface AccordionProps {
   title: string;
@@ -9,7 +9,7 @@ interface AccordionProps {
   onAccordionClick: (index: number) => void;
 }
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion: FC<AccordionProps> = ({
   title,
   children,
   activeIndex,
