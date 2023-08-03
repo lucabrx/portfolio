@@ -115,6 +115,10 @@ module.exports = {
         from: { opacity: 0, transform: "translateY(-10px)" },
         to: { opacity: 1, transform: "none" },
       },
+      "fade-out": {
+        from: { opacity: 1, transform: "none" },
+        to: { opacity: 0, transform: "translateY(10px)" },
+      },
       "image-rotate": {
         "0%": { transform: "rotateX(25deg)" },
         "25%": { transform: "rotateX(25deg) scale(0.9)" },
@@ -159,6 +163,7 @@ module.exports = {
     },
     animation: {
       "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
+      "fade-out": "fade-out  ease forwards",
       "image-rotate": "image-rotate 1400ms ease forwards",
       "image-glow": "image-glow 4100ms 600ms ease-out forwards",
       "sketch-lines": "sketch-lines 1200ms ease-out forwards",

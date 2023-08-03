@@ -8,13 +8,14 @@ import { TailwindIndicator } from "@/components/helpers/TailwindIndicator";
 import { ToastProvider } from "@/components/helpers/ToastProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Analytics } from '@vercel/analytics/react';
+import {type ReactNode} from "react";
 
 export const metadata = headConfig;
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en">

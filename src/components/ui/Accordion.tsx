@@ -1,3 +1,4 @@
+import { cn } from "@/lib/classMerge";
 import { ChevronDown } from "lucide-react";
 import type { FC, ReactNode } from "react";
 
@@ -25,9 +26,7 @@ const Accordion: FC<AccordionProps> = ({
   return (
     <div>
       <div
-        className={`flex items-center justify-between cursor-pointer bg-gray-200 p-4 ${
-          isActive ? "active" : ""
-        }`}
+        className="flex items-center justify-between cursor-pointer bg-gray-200 p-4"
         onClick={toggleAccordion}
       >
         <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
@@ -36,7 +35,8 @@ const Accordion: FC<AccordionProps> = ({
         ${isActive ? "rotate-180" : "rotate-0"}`}
         />
       </div>
-      {isActive && <div className="p-4 md:px-7 md:py-4 ">{children}</div>}
+      {isActive && <div className={cn("p-4 md:px-7 md:py-4 opacity-0",
+      isActive && "animate-fade-in [--animation-delay:50ms]")} >{children}</div>}
     </div>
   );
 };
