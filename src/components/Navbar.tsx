@@ -70,7 +70,7 @@ const Navbar: FC = ({}) => {
           </button>
 
           <ShouldRender if={isOpen}>
-            <div className={cn("absolute top-[56px] w-full h-[calc(100vh-56px)] bg-background inset-x-0",
+            <div className={cn("absolute top-[56px] z-[100] w-full h-[calc(100vh-56px)] bg-background inset-x-0",
             isOpen ? "opacity-100" : "opacity-0",
             isOpen && "animate-fade-in",
             // fadeout animation
