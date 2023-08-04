@@ -1,5 +1,5 @@
 import { Icons } from "@/components/ui/Icons";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface ToolsProps {
   text: string;

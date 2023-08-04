@@ -8,7 +8,7 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
+    const scrollTop = window.scrollY;
     if (scrollTop > 300) {
       setIsVisible(true);
     } else {
@@ -34,7 +34,7 @@ const ScrollToTop = () => {
     <Button
       variant="primary_without_glow"
       className={cn(
-        "rounded-md p-0 bg-grey-dark z-20  fixed bottom-4 right-4",
+        "rounded-md p-0 bg-grey-dark z-10  fixed bottom-4 right-4",
         isVisible ? "block" : "hidden",
       )}
       onClick={scrollToTop}

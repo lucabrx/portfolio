@@ -1,4 +1,4 @@
-import { ReactNode, type FC } from "react";
+import type { ReactNode, FC } from "react";
 
 interface ShouldRenderProps {
   if: unknown;

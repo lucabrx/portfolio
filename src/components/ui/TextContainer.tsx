@@ -5,11 +5,7 @@ interface TextContainerProps extends HtmlHTMLAttributes<HTMLParagraphElement> {
   children: ReactNode;
 }
 
-const TextContainer: FC<TextContainerProps> = ({
-  className,
-  children,
-  ...props
-}) => {
+const TextContainer: FC<TextContainerProps> = ({ className, children }) => {
   return (
     <p className={cn("text-md text-off-white/80 md:text-lg", className)}>
       {children}

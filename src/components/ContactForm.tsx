@@ -38,10 +38,10 @@ const ContactForm: FC = () => {
     resolver: zodResolver(contactForm),
   });
 
-  function onSubmit(data: ContactForm) {
+  async function onSubmit(data: ContactForm) {
     try {
       setLoading(true);
-      axios.post("/api/send-email", data);
+      await axios.post("/api/send-email", data);
       reset();
     } catch (err) {
     } finally {
@@ -55,7 +55,7 @@ const ContactForm: FC = () => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={(event) => void handleSubmit(onSubmit)(event)}
       className="w-full space-y-4 flex flex-col"
     >
       <Field label="Name" error={errors.name} className="relative">

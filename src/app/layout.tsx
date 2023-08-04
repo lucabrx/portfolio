@@ -6,17 +6,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { TailwindIndicator } from "@/components/helpers/TailwindIndicator";
 import { ToastProvider } from "@/components/helpers/ToastProvider";
+import { Analytics } from "@vercel/analytics/react";
+import { type ReactNode } from "react";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Analytics } from '@vercel/analytics/react';
-import {type ReactNode} from "react";
 
 export const metadata = headConfig;
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -31,7 +27,8 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
-            <Analytics />
+
+          <Analytics />
           <TailwindIndicator />
         </ToastProvider>
       </body>

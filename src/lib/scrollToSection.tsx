@@ -1,12 +1,14 @@
+import type { MouseEvent } from "react";
+
 export function scrollToSection(
-  event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  event: MouseEvent<HTMLButtonElement, MouseEvent>,
   id: string,
   offset: number,
 ) {
   event.preventDefault();
   const element = document.getElementById(id);
   if (element) {
-    const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY;
 
     window.scroll({
       top: offsetTop + offset,

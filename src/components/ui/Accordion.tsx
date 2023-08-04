@@ -32,11 +32,19 @@ const Accordion: FC<AccordionProps> = ({
         <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
         <ChevronDown
           className={`transition-transform duration-300
-        ${isActive ? "rotate-180" : "rotate-0" }`}
+        ${isActive ? "rotate-180" : "rotate-0"}`}
         />
       </div>
-      {isActive && <div className={cn("p-4 md:px-7 md:py-4 opacity-0",
-      isActive && "animate-fade-in [--animation-delay:50ms]")} >{children}</div>}
+      {isActive && (
+        <div
+          className={cn(
+            "p-4 md:px-7 md:py-4 opacity-0",
+            isActive && "animate-fade-in [--animation-delay:50ms]",
+          )}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

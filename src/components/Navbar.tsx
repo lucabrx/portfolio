@@ -25,10 +25,6 @@ const Navbar: FC = ({}) => {
     };
   }, [isOpen]);
 
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
-
   return (
     <header
       className={`fixed top-0 left-0 w-full z-20  ${
@@ -70,36 +66,37 @@ const Navbar: FC = ({}) => {
           </button>
 
           <ShouldRender if={isOpen}>
-            <div className={cn("absolute top-[56px] z-[100] w-full h-[calc(100vh-56px)] bg-background inset-x-0",
-            isOpen ? "opacity-100" : "opacity-0",
-            isOpen && "animate-fade-in",
-            // fadeout animation
-            !isOpen && "animate-fade-out"
-            )}>
+            <div
+              className={cn(
+                "absolute top-[56px] z-[100] w-full h-[calc(100vh-56px)] bg-background inset-x-0",
+                isOpen ? "opacity-100" : "opacity-0",
+                isOpen && "animate-fade-in",
+                // fadeout animation
+                !isOpen && "animate-fade-out",
+              )}
+            >
               <div className="flex flex-col space-y-2 py-4 ">
-                {navigation.map(({ name, section,offset }, i) => (
+                {navigation.map(({ name, section, offset }, i) => (
                   <button
                     onClick={(e) => {
                       scrollToSection(e, section, offset);
                       setIsOpen(false);
                     }}
-               
                     key={i}
                     className="text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark"
                   >
                     {name}
                   </button>
                 ))}
-                  <button
-                    onClick={(e) => {
-                      scrollToSection(e, "contact-section", 0);
-                      setIsOpen(false);
-                    }}
-              
-                    className="text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark"
-                  >
-                    Contact
-                  </button>
+                <button
+                  onClick={(e) => {
+                    scrollToSection(e, "contact-section", 0);
+                    setIsOpen(false);
+                  }}
+                  className="text-lg px-4 hover:text-grey transition-colors h-navigation-height flex items-center w-full border-b border-grey-dark"
+                >
+                  Contact
+                </button>
               </div>
             </div>
           </ShouldRender>

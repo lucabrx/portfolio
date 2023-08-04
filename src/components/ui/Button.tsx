@@ -1,5 +1,5 @@
-import { ReactNode, type FC, HTMLAttributes } from "react";
-import { cva, VariantProps } from "class-variance-authority";
+import type { ReactNode, FC, HTMLAttributes } from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { Loader2 } from "lucide-react";
 
