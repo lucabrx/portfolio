@@ -1,7 +1,7 @@
 import type { MouseEvent } from "react";
 
 export function scrollToSection(
-  event: MouseEvent<HTMLButtonElement, MouseEvent>,
+  event: MouseEvent<EventTarget>,
   id: string,
   offset: number,
 ) {

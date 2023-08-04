@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState, type FC, useEffect } from "react";
+import {useState, type FC, useEffect} from "react";
 
 import { navigation } from "@/config/navbar";
 
