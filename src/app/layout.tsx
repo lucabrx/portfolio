@@ -1,6 +1,8 @@
 import "./globals.css";
 
 import { headConfig } from "@/config/head";
+import { Montserrat } from 'next/font/google'
+
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,10 +13,11 @@ import { type ReactNode } from "react";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = headConfig;
+const font = Montserrat({ subsets: ['latin']})
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={font.className}>
       <head>
         <meta
           name="viewport"

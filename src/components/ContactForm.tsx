@@ -65,6 +65,7 @@ const ContactForm: FC = () => {
         <input
           type="text"
           placeholder="Yana Doe"
+          aria-label="enter your name"
           {...register("name")}
           className={cn(
             "rounded-md p-2 bg-off-whit border-none outline-none text-grey-dark text-md  transition-colors duration-300",
@@ -80,6 +81,7 @@ const ContactForm: FC = () => {
         )}
         <input
           type="text"
+          aria-label="enter your email"
           placeholder="yanadoe@example.com"
           {...register("email")}
           className={cn(
@@ -97,6 +99,7 @@ const ContactForm: FC = () => {
         <textarea
           placeholder="Your amazing message..."
           {...register("message")}
+            aria-label="enter your message"
           className={cn(
             "rounded-md p-2 bg-off-whit border-none outline-none text-grey-dark text-md transition-colors duration-300 overflow-y-scroll h-[200px] resize-none hide-scrollbar",
             errors.message
@@ -107,6 +110,7 @@ const ContactForm: FC = () => {
       </Field>
 
       <Button
+          aria-label="send message button"
         isLoading={loading}
         disabled={loading}
         className="w-full md:w-auto md:self-end "

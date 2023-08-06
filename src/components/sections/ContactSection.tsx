@@ -27,6 +27,7 @@ const ContactSection: FC = () => {
           <Image
             src="/contact.svg"
             alt="potrait"
+            aria-label="image of email"
             width={420}
             height={420}
             className={cn(

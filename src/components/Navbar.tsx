@@ -35,7 +35,11 @@ const Navbar: FC = ({}) => {
     >
       <div className="flex py-2 h-[56px] items-center justify-between container">
         <div className="flex gap-4 items-center justify-center">
-          <Link className="flex items-center" href="/">
+          <Link
+              aria-description="Sending user to the top of the page"
+              aria-label="Link to home"
+              className="flex items-center"
+              href="/">
             <Image src="/logo.svg" alt="logo" width={32} height={32} />
           </Link>
 
@@ -44,6 +48,7 @@ const Navbar: FC = ({}) => {
               <button
                 onClick={(e) => scrollToSection(e, section, offset)}
                 key={i}
+                aria-label={`Link to ${name}`}
                 className="text-lg ml-6 hover:text-grey transition-colors"
               >
                 {name}
@@ -56,12 +61,13 @@ const Navbar: FC = ({}) => {
           <Button
             onClick={(e) => scrollToSection(e, "contact-section", 0)}
             size="md"
+            aria-label={"Link to contact section"}
             className="hidden md:block"
           >
             Contact me
           </Button>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          <button aria-label="toggle user menu" onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
 
@@ -78,6 +84,7 @@ const Navbar: FC = ({}) => {
               <div className="flex flex-col space-y-2 py-4 ">
                 {navigation.map(({ name, section, offset }, i) => (
                   <button
+                      aria-label={`Sending user to the  ${name}`}
                     onClick={(e) => {
                       scrollToSection(e, section, offset);
                       setIsOpen(false);
@@ -89,6 +96,7 @@ const Navbar: FC = ({}) => {
                   </button>
                 ))}
                 <button
+                    aria-label="Sending user to the contact section"
                   onClick={(e) => {
                     scrollToSection(e, "contact-section", 0);
                     setIsOpen(false);

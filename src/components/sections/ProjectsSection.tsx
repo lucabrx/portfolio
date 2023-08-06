@@ -58,6 +58,7 @@ const ProjectsSection: FC = () => {
           ))}
         </div>
         <button
+            aria-label="scroll left"
           className={cn(
             "absolute z-30 top-[45%] left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block",
             inView ? "animate-fade-in [--animation-delay:300ms] " : "",
@@ -67,6 +68,7 @@ const ProjectsSection: FC = () => {
           <Icons.left className="h-7" />
         </button>
         <button
+            aria-label="scroll right"
           className={cn(
             "absolute z-30 top-[45%] right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block",
             inView ? "animate-fade-in [--animation-delay:300ms]" : "",

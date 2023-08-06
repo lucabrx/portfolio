@@ -38,6 +38,7 @@ const HeroSection: FC = () => {
 
           <div className="animate-fade-in [--animation-delay:400ms] opacity-0 mt-4 self-start   md:mt-4">
             <Button
+                aria-label="button to contact section"
               size="lg"
               onClick={(e) => scrollToSection(e, "contact-section", 0)}
             >

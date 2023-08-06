@@ -54,6 +54,7 @@ const AboutSection: FC = () => {
           <Image
             src="/profile.png"
             alt="potrait"
+            aria-label="potrait of me"
             width={370}
             height={370}
             className={cn(
@@ -71,6 +72,7 @@ const AboutSection: FC = () => {
             <Image
               src="/profile.png"
               alt="potrait"
+              aria-label="potrait of me"
               width={280}
               height={280}
               className="rounded-md drop-shadow-sm"
