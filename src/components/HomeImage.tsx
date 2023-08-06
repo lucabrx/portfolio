@@ -16,7 +16,7 @@ const HomeImage: FC = () => {
               className="rounded-md delay-[650ms]"
             />
           </div>
-          <div className="absolute  aspect-video w-[calc(45%)] -top-10 left-0 md:-left-4  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md ">
+          <div className="absolute  h-[45%] w-[45%] -top-10 left-0 md:-left-4  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient rounded-md ">
             <Image
               src="/projects/chatnik-full.png"
               alt="Picture of the author"
@@ -24,7 +24,7 @@ const HomeImage: FC = () => {
               className="rounded-md delay-[650ms]"
             />
           </div>
-          <div className="absolute  aspect-video w-[calc(45%)] -top-6 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient  rounded-md ">
+          <div className="absolute  h-[45%] w-[45%] -top-6 right-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient  rounded-md ">
             <Image
               src="/projects/quanta-full.png"
               alt="Picture of the author"
@@ -32,7 +32,7 @@ const HomeImage: FC = () => {
               className="rounded-md delay-[650ms]"
             />
           </div>
-          <div className="absolute  aspect-video w-[calc(65%)] -bottom-4 left-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-30 rounded-md ">
+          <div className="absolute  h-[65%] w-[calc(65%)] -bottom-4 left-6 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-30 rounded-md ">
             <Image
               src="/projects/icon-gen-full.png"
               alt="Picture of the author"
@@ -40,7 +40,7 @@ const HomeImage: FC = () => {
               className="rounded-md delay-[650ms]"
             />
           </div>
-          <div className="absolute  aspect-video w-[calc(65%)] -bottom-8 -right-0 md:-right-4 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md ">
+          <div className="absolute  h-[65%] w-[65%] -bottom-8 -right-0 md:-right-4 border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient z-20 rounded-md ">
             <Image
               src="/projects/vox-populi-full.png"
               alt="Picture of the author"
@@ -48,11 +48,6 @@ const HomeImage: FC = () => {
               className="rounded-md delay-[650ms]"
             />
           </div>
-          {/* <div className='relative aspect-video w-full origin-top-left -skew-x-12 '>
-  <Image src="/projects/fitness-t-full.png" alt="Picture of the author" fill  
-  className='  rounded-md z-10  transition-opacity delay-[650ms] opacity-100 ' /> 
-   <div className='absolute inset-0 bg-background/30 backdrop-blur-[1px] z-10 '></div> 
-  </div> */}
         </div>
       </div>
     </div>
