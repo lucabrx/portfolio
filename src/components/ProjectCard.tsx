@@ -23,7 +23,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
         ))}
       </div>
       <div className="relative w-full aspect-video shadow-secondary">
-        <Image src={project.image} alt={project.title} fill sizes="100%" />
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="aspect-video"
+          priority
+        />
         <div className="bg-glass-gradient absolute inset-0" />
       </div>
       <div className="px-4 flex flex-col justify-between h-fit">

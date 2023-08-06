@@ -86,6 +86,7 @@ const Footer: FC = () => {
           <div className="mt-auto flex space-x-2 text-grey">
             {socialApps.map((item) => (
               <a
+                aria-label={`Link to my social media ${item.tooltip}`}
                 key={item.id}
                 data-tooltip={item.tooltip}
                 href={item.href}
