@@ -84,11 +84,8 @@ const Navbar: FC = ({}) => {
           <ShouldRender if={isOpen}>
             <div
               className={cn(
-                "absolute top-[56px] z-[100] w-full h-[calc(100vh-56px)] bg-background inset-x-0",
-                isOpen ? "opacity-100" : "opacity-0",
-                isOpen && "animate-fade-in",
-                // fadeout animation
-                !isOpen && "animate-fade-out",
+                "absolute top-[56px] z-[100] w-full h-[calc(100vh-56px)] bg-background inset-x-0 transition-opacity opacity-0",
+                isOpen ? "animate-fade-in opacity-100" : "animate-fade-out opacity-0"
               )}
             >
               <div className="flex flex-col space-y-2 py-4 ">

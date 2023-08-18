@@ -60,7 +60,7 @@ const ProjectsSection: FC = () => {
         <button
           aria-label="scroll left"
           className={cn(
-            "absolute z-30 top-[45%] left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block",
+            "absolute z-30 top-[45%] left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0",
             inView ? "animate-fade-in [--animation-delay:300ms] " : "",
           )}
           onClick={() => handleScroll(-350)}
@@ -70,7 +70,7 @@ const ProjectsSection: FC = () => {
         <button
           aria-label="scroll right"
           className={cn(
-            "absolute z-30 top-[45%] right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0 hidden md:block",
+            "absolute z-30 top-[45%] right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0",
             inView ? "animate-fade-in [--animation-delay:300ms]" : "",
           )}
           onClick={() => handleScroll(350)}

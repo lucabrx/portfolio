@@ -83,6 +83,7 @@ const Footer: FC = () => {
             <Image src="/logo.svg" alt="logo" width={32} height={32} />
             Luka Brkovic
           </div>
+
           <div className="mt-auto flex space-x-2 text-grey">
             {socialApps.map((item) => (
               <a
