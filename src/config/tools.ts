@@ -13,8 +13,7 @@ export const frontendTools: ToolsProps[] = [
 export const backendTools: ToolsProps[] = [
   { text: "Mongo", Icon: Icons.mongodb },
   { text: "SQL", Icon: Icons.sql },
+  { text: "Docker", Icon: Icons.docker },
+  { text: "Fastify", Icon: Icons.fastify },
 ];
-export const designTools: ToolsProps[] = [
-  { text: "Figma", Icon: Icons.figma },
-  { text: "Figma", Icon: Icons.figma },
-];
+export const designTools: ToolsProps[] = [{ text: "Figma", Icon: Icons.figma }];
