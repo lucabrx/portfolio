@@ -25,18 +25,13 @@ const HeroSection: FC = () => {
             <span className="ml-1 lg:hidden"> web developer</span>
           </h1>
 
-          <p className="animate-fade-in  [--animation-delay:200ms] opacity-0   mt-2 lg:mt-4 xs:text-lg md:text-sm lg:text-md xl:text-lg w-full text-left ">
+          <p className="text-off-white/70 animate-fade-in  [--animation-delay:200ms] opacity-0   mt-2 lg:mt-4 xs:text-lg md:text-sm lg:text-md xl:text-lg w-full text-left xl:w-4/5 xl:self-start">
             Welcome to my portfolio, where you&apos;ll find a collection of my
             projects that demonstrate my skills and expertise. {"  "}
-            <span className="hidden md:inline-block">
-              Feel free to contact me.
-            </span>
-            <span className="md:inline-block hidden">
-              I&apos;m always excited to take on new challenges.
-            </span>
+
           </p>
 
-          <div className="animate-fade-in [--animation-delay:400ms] opacity-0 mt-4 self-start   md:mt-4">
+          <div className="animate-fade-in [--animation-delay:400ms] opacity-0 mt-4 self-start  md:mt-4">
             <Button
               aria-label="button to contact section"
               size="lg"

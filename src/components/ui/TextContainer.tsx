@@ -7,7 +7,7 @@ interface TextContainerProps extends HtmlHTMLAttributes<HTMLParagraphElement> {
 
 const TextContainer: FC<TextContainerProps> = ({ className, children }) => {
   return (
-    <p className={cn("text-md text-off-white/80 md:text-lg", className)}>
+    <p className={cn("text-md text-off-white/70 md:text-lg", className)}>
       {children}
     </p>
   );

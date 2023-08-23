@@ -18,6 +18,7 @@ export const buttonClasses = cva(
           "text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in",
         github: "shadow-sm hover:bg-[#27272a] bg-[#27272a]/70 text-[##fefffe]",
         icon: "bg-transparent hover:bg-grey-dark rounded-md  transition-[shadow,text-shadow] duration-300 cursor-pointer",
+        link: "text-off-white/70 hover:text-off-white transition-colors hover:underline duration-300",
       },
       size: {
         sm: "text-xs px-3 h-7",

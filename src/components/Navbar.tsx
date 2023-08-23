@@ -13,8 +13,6 @@ import { cn } from "@/lib/classMerge";
 const Navbar: FC = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  //TODO fadeout animation
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "HIDDEN";
@@ -104,6 +102,9 @@ const Navbar: FC = ({}) => {
                     {name}
                   </button>
                 ))}
+
+
+
                 <button
                   aria-label="Sending user to the contact section"
                   onClick={(e) => {

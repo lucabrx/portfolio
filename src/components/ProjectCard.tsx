@@ -27,7 +27,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           src={project.image}
           alt={project.title}
           width={510}
-          height={312}
+          height={286}
           className="aspect-video"
           priority
         />
