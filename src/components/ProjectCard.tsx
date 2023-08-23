@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="relative flex w-full shrink-0 snap-center flex-col items-center justify-start overflow-hidden rounded-md border border-transparent-white bg-glass-gradient md:basis-[calc(42.66%-12px)] md:min-w-[510px] gap-3 md:gap-5 pb-4 ">
+    <div className="relative flex w-full shrink-0 snap-center flex-col items-center justify-between overflow-hidden rounded-md border border-transparent-white bg-glass-gradient md:basis-[calc(42.66%-12px)] md:min-w-[510px] gap-3 md:gap-5 pb-4 ">
       <div className=" flex flex-wrap gap-2 mt-2 md:mt-3 absolute top-0 right-2 z-20  md:max-w-[360px] justify-end">
         <Badge>{project.mainBadge}</Badge>
         {project.badges.map((badge) => (
@@ -22,11 +22,12 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           </Badge>
         ))}
       </div>
-      <div className="relative w-full aspect-video shadow-secondary">
+      <div className="relative w-full shadow-secondary">
         <Image
           src={project.image}
           alt={project.title}
-          fill
+          width={510}
+          height={312}
           className="aspect-video"
           priority
         />
