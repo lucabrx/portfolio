@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Quanta AI",
     description:
       "Quanta is AI with a lot of possibilities, from generating text to creating images and more",
-    image: "/project/quanta.png",
+    image: "/projects/quanta.png",
     link: "https://quanta-ai-next.vercel.app/",
     github: "https://github.com/lucabrx/quanta-ai-next",
     mainBadge: "NextJS",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Web Dev Tools",
     description:
       "Collection of tools for web developers and design, with ability to send us your tool for showcase",
-    image: "/project/web-dev-tools.png",
+    image: "/projects/web-dev-tools.png",
     link: "https://wd-tool.vercel.app/",
     github: "https://github.com/lucabrx/wd-tool",
     mainBadge: "NextJS",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     title: "VoxPopuli - Blog",
     description:
       "Blog with ability to create,edit,delete post and fresh news from around the world with comments",
-    image: "/project/vox-populi.png",
+    image: "/projects/vox-populi.png",
     link: "https://vox-populiv3.vercel.app/",
     github: "https://github.com/lucabrx/vox-populiv3",
     mainBadge: "NextJS",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     title: "IconAi - Icon Generator",
     description:
       "Generate icons with OpenAi, saving them to S3 and displaying them on the website with community",
-    image: "/project/icon-ai.png",
+    image: "/projects/icon-ai.png",
     link: "https://icon-ai-ughw.vercel.app/",
     github: "https://github.com/lucabrx/iconAi",
     mainBadge: "NextJS",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: "Airbnb Clone",
     description:
       "Airbnb clone with authentication ,ability to create property or to book place to stay and more ",
-    image: "/project/air-bnb.png",
+    image: "/projects/air-bnb.png",
     link: "https://airbnb-clone-zeta-lime.vercel.app/",
     github: "https://github.com/lucabrx/airbnb-clone",
     mainBadge: "NextJS",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     title: "Jimmy - Fitness Coach",
     description:
       "Fitness coach landing page with framer animations,moderen design and responsive",
-    image: "/project/jimmy-dzomlia.png",
+    image: "/projects/jimmy-dzomlia.png",
     link: "https://fitness-coach-jimmy-dzomlia.vercel.app/",
     github: "https://github.com/lucabrx/fitness-coach-jimmy-dzomlia",
     mainBadge: "NextJS",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     title: "Daflix - Netflix Clone",
     description:
       "Netflix clone with authentication and movies, just in white and blue colour version",
-    image: "/project/daflix.png",
+    image: "/projects/daflix.png",
     link: "https://daflix-nine.vercel.app/",
     github: "https://github.com/lucabrx/daflix",
     mainBadge: "NextJS",
