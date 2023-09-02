@@ -98,7 +98,7 @@ const ContactForm: FC = () => {
         size="lg"
       >
         <ShouldRender if={!loading}>
-          <span >✍️</span>
+          <span className="mr-2" >✍️</span>
         </ShouldRender>
          Send Message
       </Button>
