@@ -39,7 +39,7 @@ const Button: FC<ButtonProps> = ({ isLoading, disabled, children, variant, size,
     <button disabled={disabled} {...props} className={buttonClasses({ variant, size, className })}>
       <ShouldRender if={isLoading}>
         {" "}
-        <Loader2 className="animate-spin h-4 w-4" />{" "}
+        <Loader2 className="mr-2 animate-spin h-4 w-4" />{" "}
       </ShouldRender>
       {children}
     </button>
