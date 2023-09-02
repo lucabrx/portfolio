@@ -47,21 +47,13 @@ html {
   }
 
   .text-gradient {
-    background: linear-gradient(
-      to right bottom,
-      rgb(255, 255, 255) 30%,
-      rgba(255, 255, 255, 0.38)
-    );
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
     background-clip: text;
     color: transparent;
   }
 
   .mask-radial-faded {
-    mask-image: radial-gradient(
-      circle at center center,
-      black,
-      transparent 80%
-    );
+    mask-image: radial-gradient(circle at center center, black, transparent 80%);
   }
 
   .mask-linear-faded {

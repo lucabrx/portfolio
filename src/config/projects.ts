@@ -1,20 +1,19 @@
 export type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  github: string;
-  mainBadge: string;
-  badges: string[];
-};
+  id: number
+  title: string
+  description: string
+  image: string
+  link: string
+  github: string
+  mainBadge: string
+  badges: string[]
+}
 
 export const projects: Project[] = [
   {
     id: 1,
     title: "Quanta AI",
-    description:
-      "Quanta is AI with a lot of possibilities, from generating text to creating images and more",
+    description: "Quanta is AI with a lot of possibilities, from generating text to creating images and more",
     image: "/projects/quanta.png",
     link: "https://quanta-ai-next.vercel.app/",
     github: "https://github.com/lucabrx/quanta-ai-next",
@@ -24,8 +23,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Web Dev Tools",
-    description:
-      "Collection of tools for web developers and design, with ability to send us your tool for showcase",
+    description: "Collection of tools for web developers and design, with ability to send us your tool for showcase",
     image: "/projects/web-dev-tools.png",
     link: "https://wd-tool.vercel.app/",
     github: "https://github.com/lucabrx/wd-tool",
@@ -35,8 +33,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "VoxPopuli - Blog",
-    description:
-      "Blog with ability to create,edit,delete post and fresh news from around the world with comments",
+    description: "Blog with ability to create,edit,delete post and fresh news from around the world with comments",
     image: "/projects/vox-populi.png",
     link: "https://vox-populiv3.vercel.app/",
     github: "https://github.com/lucabrx/vox-populiv3",
@@ -46,8 +43,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "IconAi - Icon Generator",
-    description:
-      "Generate icons with OpenAi, saving them to S3 and displaying them on the website with community",
+    description: "Generate icons with OpenAi, saving them to S3 and displaying them on the website with community",
     image: "/projects/icon-ai.png",
     link: "https://icon-ai-ughw.vercel.app/",
     github: "https://github.com/lucabrx/iconAi",
@@ -57,8 +53,7 @@ export const projects: Project[] = [
   {
     id: 98,
     title: "Airbnb Clone",
-    description:
-      "Airbnb clone with authentication ,ability to create property or to book place to stay and more ",
+    description: "Airbnb clone with authentication ,ability to create property or to book place to stay and more ",
     image: "/projects/air-bnb.png",
     link: "https://airbnb-clone-zeta-lime.vercel.app/",
     github: "https://github.com/lucabrx/airbnb-clone",
@@ -68,8 +63,7 @@ export const projects: Project[] = [
   {
     id: 99,
     title: "Jimmy - Fitness Coach",
-    description:
-      "Fitness coach landing page with framer animations,moderen design and responsive",
+    description: "Fitness coach landing page with framer animations,moderen design and responsive",
     image: "/projects/jimmy-dzomlia.png",
     link: "https://fitness-coach-jimmy-dzomlia.vercel.app/",
     github: "https://github.com/lucabrx/fitness-coach-jimmy-dzomlia",
@@ -79,12 +73,11 @@ export const projects: Project[] = [
   {
     id: 100,
     title: "Daflix - Netflix Clone",
-    description:
-      "Netflix clone with authentication and movies, just in white and blue colour version",
+    description: "Netflix clone with authentication and movies, just in white and blue colour version",
     image: "/projects/daflix.png",
     link: "https://daflix-nine.vercel.app/",
     github: "https://github.com/lucabrx/daflix",
     mainBadge: "NextJS",
     badges: ["TypeScript", "Prisma", "TailwindCSS", "NextAuth"],
   },
-];
+]

@@ -1,27 +1,25 @@
-import { type FC } from "react";
-import { type FieldError } from "react-hook-form";
-
-import { cn } from "@/lib/classMerge";
-
-import ShouldRender from "@/components/helpers/ShouldRender";
+import { type FC } from "react"
+import ShouldRender from "@/components/helpers/ShouldRender"
+import { cn } from "@/lib/classMerge"
+import { type FieldError } from "react-hook-form"
 
 interface FieldProps {
-  children: React.ReactNode;
-  label: string;
-  error?: FieldError;
-  className?: string;
+  children: React.ReactNode
+  label: string
+  error?: FieldError
+  className?: string
 }
 
 const Field: FC<FieldProps> = ({ error, children, label, className }) => {
   return (
-    <div className={cn("w-full flex flex-col space-y-2", className)}>
+    <div className={cn("flex w-full flex-col space-y-2", className)}>
       <label className="text-lg">{label}</label>
       {children}
       <ShouldRender if={error}>
-        <p className="text-[#dc2626] text-sm">{error?.message}</p>
+        <p className="text-sm text-[#dc2626]">{error?.message}</p>
       </ShouldRender>
     </div>
-  );
-};
+  )
+}
 
-export default Field;
+export default Field

@@ -1,5 +1,5 @@
 interface AboutText {
-  text: string;
+  text: string
 }
 
 export const text: AboutText[] = [
@@ -21,7 +21,7 @@ export const text: AboutText[] = [
   {
     text: "🗣️ My native language is Croatian, but I also speak English and German.",
   },
-];
+]
 
 export const textHidden: AboutText[] = [
   {
@@ -30,4 +30,4 @@ export const textHidden: AboutText[] = [
   {
     text: "🧑‍💻 I am currently open for new opportunities, so if you're interested in working with me, feel free to contact me.",
   },
-];
+]

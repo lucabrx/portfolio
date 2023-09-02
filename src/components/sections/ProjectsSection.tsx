@@ -1,59 +1,50 @@
-"use client";
-import { useRef, type FC } from "react";
-import { useInView } from "react-intersection-observer";
+"use client"
 
-import { cn } from "@/lib/classMerge";
-import { projects } from "@/config/projects";
-
-import { Icons } from "@/components/ui/Icons";
-import ProjectCard from "@/components/ProjectCard";
+import { useRef, type FC } from "react"
+import ProjectCard from "@/components/ProjectCard"
+import { Icons } from "@/components/ui/Icons"
+import { projects } from "@/config/projects"
+import { cn } from "@/lib/classMerge"
+import { useInView } from "react-intersection-observer"
 
 const ProjectsSection: FC = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  });
+  })
 
   function handleScroll(scrollOffset: number) {
     if (scrollContainerRef.current) {
-      const scrollContainer = scrollContainerRef.current;
-      const maxScrollLeft =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      const scrollContainer = scrollContainerRef.current
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-      const newScrollLeft = scrollContainer.scrollLeft + scrollOffset;
-      const adjustedScrollLeft = Math.max(
-        0,
-        Math.min(maxScrollLeft, newScrollLeft),
-      );
+      const newScrollLeft = scrollContainer.scrollLeft + scrollOffset
+      const adjustedScrollLeft = Math.max(0, Math.min(maxScrollLeft, newScrollLeft))
 
       scrollContainer.scrollTo({
         left: adjustedScrollLeft,
         behavior: "smooth",
-      });
+      })
     }
   }
 
   return (
-    <div
-      id="projects-section"
-      ref={ref}
-      className="mt-6 md:mt-10 lg:mt-16 container"
-    >
+    <div id="projects-section" ref={ref} className="container mt-6 md:mt-10 lg:mt-16">
       <h2
         className={cn(
-          "w-full text-center lg:text-4xl xl:text-5xl text-3xl font-semibold opacity-0",
-          inView ? "animate-fade-in" : "",
+          "w-full text-center text-3xl font-semibold opacity-0 lg:text-4xl xl:text-5xl",
+          inView ? "animate-fade-in" : ""
         )}
       >
-        My Projects👨‍💻
+        My Projects 👨‍💻
       </h2>
-      <div className="flex gap-6 overflow-x-auto mt-6 hide-scrollbar relative">
+      <div className="hide-scrollbar relative mt-6 flex gap-6 overflow-x-auto">
         <div
           ref={scrollContainerRef}
           className={cn(
-            "flex gap-4 md:gap-7 overflow-x-scroll px-5 md:px-0 py-6 hide-scrollbar opacity-0 transition-transform transform",
-            inView ? "animate-fade-in [--animation-delay:300ms]" : "",
+            "hide-scrollbar flex transform gap-4 overflow-x-scroll px-5 py-6 opacity-0 transition-transform md:gap-7 md:px-0",
+            inView ? "animate-fade-in [--animation-delay:300ms]" : ""
           )}
         >
           {projects.map((project) => (
@@ -63,8 +54,8 @@ const ProjectsSection: FC = () => {
         <button
           aria-label="scroll left"
           className={cn(
-            "hidden md:block absolute z-30 top-[45%] left-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0",
-            inView ? "animate-fade-in [--animation-delay:300ms] " : "",
+            "absolute left-3 top-[45%] z-30 hidden rounded-md bg-grey/20 p-1 opacity-0 transition-colors duration-300 hover:bg-grey/40 md:block",
+            inView ? "animate-fade-in [--animation-delay:300ms] " : ""
           )}
           onClick={() => handleScroll(-350)}
         >
@@ -73,17 +64,17 @@ const ProjectsSection: FC = () => {
         <button
           aria-label="scroll right"
           className={cn(
-            "hidden md:block absolute z-30 top-[45%] right-3 bg-grey/20 rounded-md p-1 hover:bg-grey/40 transition-colors duration-300 opacity-0",
-            inView ? "animate-fade-in [--animation-delay:300ms]" : "",
+            "absolute right-3 top-[45%] z-30 hidden rounded-md bg-grey/20 p-1 opacity-0 transition-colors duration-300 hover:bg-grey/40 md:block",
+            inView ? "animate-fade-in [--animation-delay:300ms]" : ""
           )}
           onClick={() => handleScroll(350)}
         >
           <Icons.right className="h-7" />
         </button>
       </div>
-      <div className="flex gap-6 mt-5"></div>
+      <div className="mt-5 flex gap-6"></div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectsSection;
+export default ProjectsSection

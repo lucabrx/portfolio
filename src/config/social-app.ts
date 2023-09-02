@@ -1,4 +1,4 @@
-import { Icons } from "@/components/ui/Icons";
+import { Icons } from "@/components/ui/Icons"
 
 export const socialApps = [
   {
@@ -25,4 +25,4 @@ export const socialApps = [
     href: "https://www.linkedin.com/in/luka-brkovic-23b116261/",
     tooltip: "LinkedIn",
   },
-];
+]

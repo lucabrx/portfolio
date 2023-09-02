@@ -1,47 +1,45 @@
-"use client";
+"use client"
 
-import Button from "@/components/ui/Button";
-import { ArrowUp } from "lucide-react";
-import { useState, useEffect } from "react";
-import { cn } from "@/lib/classMerge";
+import { useEffect, useState } from "react"
+import Button from "@/components/ui/Button"
+import { cn } from "@/lib/classMerge"
+import { ArrowUp } from "lucide-react"
+
 const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   const handleScroll = () => {
-    const scrollTop = window.scrollY;
+    const scrollTop = window.scrollY
     if (scrollTop > 300) {
-      setIsVisible(true);
+      setIsVisible(true)
     } else {
-      setIsVisible(false);
+      setIsVisible(false)
     }
-  };
+  }
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    });
-  };
+    })
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
   return (
     <Button
       variant="primary_without_glow"
-      className={cn(
-        "rounded-md p-0 bg-grey-dark z-10  fixed bottom-4 right-4",
-        isVisible ? "block" : "hidden",
-      )}
+      className={cn("fixed bottom-4 right-4 z-10  rounded-md bg-grey-dark p-0", isVisible ? "block" : "hidden")}
       onClick={scrollToTop}
     >
-      <ArrowUp className="w-4 h-4 " />
+      <ArrowUp className="h-4 w-4 " />
     </Button>
-  );
-};
+  )
+}
 
-export default ScrollToTop;
+export default ScrollToTop
