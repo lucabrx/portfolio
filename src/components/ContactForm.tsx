@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import ShouldRender from "@/components/helpers/ShouldRender";
 
 const contactForm = z.object({
   name: z.string().min(2, "Must be at least 2 characters long.").max(50, "Must be at most 50 characters long."),
@@ -96,7 +97,10 @@ const ContactForm: FC = () => {
         className="w-full md:w-auto md:self-end "
         size="lg"
       >
-        ✍️ Send Message
+        <ShouldRender if={!loading}>
+          <span >✍️</span>
+        </ShouldRender>
+         Send Message
       </Button>
     </form>
   )
