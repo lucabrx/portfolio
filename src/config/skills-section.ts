@@ -3,5 +3,5 @@ export const skillText = [
   "Most of the time I use NextJS but I also have experience with Svelte as Frontend/Fullstack Frameworks.",
   "I am also familiar with Sql Databases and have small experience with MongoDB.",
   "For design purposes I use Figma",
-  "Expect NextJS and SvelteKit as backend frameworks for serverless functions, I am currently learning Golang.",
+  "Expect NextJS and SvelteKit as backend frameworks for serverless functions, I am currently learning Python.",
 ]
