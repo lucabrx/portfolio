@@ -1,42 +1,48 @@
-import { type FC } from "react"
-import Image from "next/image"
+import Image from "next/image";
+import {useRef} from "react";
+import {cn} from "@/lib/classMerge";
 
-const HomeImage: FC = () => {
-  return (
-    <div className="max-w-[880px] rounded-md pb-[180px] [perspective:2000px] md:pb-[250px]">
-      <div className="relative before:absolute before:left-0 before:top-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)]">
-        {/* <div className='absolute inset-0 z-30 bg-glass-gradient2 blur-sm'></div> */}
-
-        <div className="rotate-20 mt-12 flex">
-          <div className="relative left-3 z-10 mr-4  aspect-video w-[calc(100vw-64px)] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient md:left-0 ">
-            <Image
-              src="/projects/jimmy-dzomlia.png"
-              alt="Picture of the author"
-              fill
-              className="rounded-md delay-[650ms]"
-            />
-          </div>
-          <div className="absolute  -top-10 left-0 h-[45%] w-[45%] rounded-md  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient md:-left-4 ">
-            <Image src="/projects/icon-ai.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
-          </div>
-          <div className="absolute  -top-6 right-6 h-[45%] w-[45%] rounded-md border border-transparent-white bg-white bg-opacity-[0.01]  bg-hero-gradient ">
-            <Image src="/projects/quanta.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
-          </div>
-          <div className="absolute  -bottom-4 left-6 z-30 h-[65%] w-[calc(65%)] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient ">
-            <Image src="/projects/quanta.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
-          </div>
-          <div className="absolute  -bottom-8 -right-0 z-20 h-[65%] w-[65%] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient md:-right-4 ">
-            <Image
-              src="/projects/web-dev-tools.png"
-              alt="Picture of the author"
-              fill
-              className="rounded-md delay-[650ms] hover:z-[150]"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+interface HomeImageProps {
+    src: string;
+    width: number;
+    height: number;
+    className?: string;
 }
 
-export default HomeImage
+export default function HomeImage({src, width, height, className}: HomeImageProps) {
+    const ref = useRef<DOMRect | null>(null);
+    // how to add z-index to the image that is hovered which overwrites absolute?
+
+
+  return (
+
+           <div className={cn("flex flex-col absolute [perspective:800px]", className)}>
+               <div
+                   onMouseLeave={() => ref.current = null}
+                   onMouseEnter={(e) => ref.current = e.currentTarget.getBoundingClientRect()}
+                   onMouseMove={(e) => {
+                       if (!ref.current) return;
+                       const x = e.clientX - ref.current.left;
+                       const y = e.clientY - ref.current.top;
+                       const xPercentage = x / ref.current.width;
+                       const yPercentage = y / ref.current.height;
+                       const xRotation = (xPercentage - 0.5) * 20;
+                       const yRotation = (0.5 - yPercentage) * 20;
+
+                       e.currentTarget.style.setProperty("--x-rotation", `${yRotation}deg`);
+                       e.currentTarget.style.setProperty("--y-rotation", `${xRotation}deg`);
+                       e.currentTarget.style.setProperty("--x", `${xPercentage * 200}%`);
+                       e.currentTarget.style.setProperty("--y", `${yPercentage * 200}%`);
+                   }}
+                   className="transition-transform ease-out md:hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.1)] rounded-md  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient">
+                   <Image
+                       src={src}
+                       alt="Picture of the author"
+                       width={width}
+                       height={height}
+                       className="rounded-md delay-[650ms] hover:z-[150]"
+                   />
+               </div>
+           </div>
+  )
+}

@@ -2,7 +2,6 @@
 
 import { type FC } from "react"
 import HomeImage from "@/components/HomeImage"
-import HomeImageV2 from "@/components/HomeImagev2"
 import Button from "@/components/ui/Button"
 import { scrollToSection } from "@/lib/scrollToSection"
 
@@ -44,11 +43,11 @@ const HeroSection: FC = () => {
           <div className="max-w-[880px] rounded-md pb-[180px] [perspective:2000px] md:pb-[250px]">
             <div className="relative before:absolute before:left-0 before:top-0 before:h-full before:w-full before:animate-image-glow before:bg-hero-glow before:opacity-0 before:[filter:blur(120px)]">
               <div className="mt-32 lg:mb-12 flex relative rotate-20 -left-20 xl:left-0">
-                <HomeImageV2 src={"/projects/jimmy-dzomlia.png"} width={470} height={470} className="-top-[180px] z-10 hover:z-40 xl:-top-[220px]" />
-                 <HomeImageV2 src={"/projects/icon-ai.png"} width={270} height={270} className="-top-[200px] -left-6 hover:z-30 xl:-top-[240px]" />
-                <HomeImageV2 src={"/projects/quanta.png"} width={270} height={270} className="-top-[210px] -right-18 hover:z-30 xl:-top-[250px]" />
-                <HomeImageV2 src={"/projects/web-dev-tools.png"} width={320} height={320} className="-top-[100px] -right-12 z-20 hover:z-40 xl:-top-[120px]" />
-                <HomeImageV2 src={"/projects/vox-populi.png"} width={320} height={320} className="-top-[80px] -left-12 z-20 hover:z-40 xl:-top-[100px]" />
+                <HomeImage src={"/projects/jimmy-dzomlia.png"} width={470} height={470} className="-top-[180px] z-10 hover:z-40 xl:-top-[220px]" />
+                 <HomeImage src={"/projects/icon-ai.png"} width={270} height={270} className="-top-[200px] -left-6 hover:z-30 xl:-top-[240px]" />
+                <HomeImage src={"/projects/quanta.png"} width={270} height={270} className="-top-[210px] -right-18 hover:z-30 xl:-top-[250px]" />
+                <HomeImage src={"/projects/web-dev-tools.png"} width={320} height={320} className="-top-[100px] -right-12 z-20 hover:z-40 xl:-top-[120px]" />
+                <HomeImage src={"/projects/vox-populi.png"} width={320} height={320} className="-top-[80px] -left-12 z-20 hover:z-40 xl:-top-[100px]" />
 
               </div>
             </div>
