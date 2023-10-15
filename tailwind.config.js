@@ -162,7 +162,7 @@ module.exports = {
       "sketch-lines": "sketch-lines 1200ms ease-out forwards",
       "glow-line-horizontal": "glow-line-horizontal var(--animation-duration) ease-in forwards",
       "glow-line-vertical": "glow-line-vertical var(--animation-duration) ease-in forwards",
-      "spin": "animate-circle 1000ms linear infinite",
+      spin: "animate-circle 1000ms linear infinite",
     },
   },
   plugins: [],

@@ -17,35 +17,20 @@ const HomeImage: FC = () => {
             />
           </div>
           <div className="absolute  -top-10 left-0 h-[45%] w-[45%] rounded-md  border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient md:-left-4 ">
-            <Image
-              src="/projects/icon-ai.png"
-              alt="Picture of the author"
-              fill
-              className="rounded-md delay-[650ms]"
-            />
+            <Image src="/projects/icon-ai.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
           </div>
           <div className="absolute  -top-6 right-6 h-[45%] w-[45%] rounded-md border border-transparent-white bg-white bg-opacity-[0.01]  bg-hero-gradient ">
-            <Image
-              src="/projects/quanta.png"
-              alt="Picture of the author"
-              fill
-              className="rounded-md delay-[650ms]"
-            />
+            <Image src="/projects/quanta.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
           </div>
           <div className="absolute  -bottom-4 left-6 z-30 h-[65%] w-[calc(65%)] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient ">
-            <Image
-              src="/projects/quanta.png"
-              alt="Picture of the author"
-              fill
-              className="rounded-md delay-[650ms]"
-            />
+            <Image src="/projects/quanta.png" alt="Picture of the author" fill className="rounded-md delay-[650ms]" />
           </div>
           <div className="absolute  -bottom-8 -right-0 z-20 h-[65%] w-[65%] rounded-md border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient md:-right-4 ">
             <Image
               src="/projects/web-dev-tools.png"
               alt="Picture of the author"
               fill
-              className="rounded-md delay-[650ms]"
+              className="rounded-md delay-[650ms] hover:z-[150]"
             />
           </div>
         </div>

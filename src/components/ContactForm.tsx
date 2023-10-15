@@ -1,6 +1,7 @@
 "use client"
 
-import {useContext, useState, type FC} from "react"
+import { useContext, useState, type FC } from "react"
+import ShouldRender from "@/components/helpers/ShouldRender"
 import ToastContext from "@/components/helpers/ToastProvider"
 import Button from "@/components/ui/Button"
 import Field from "@/components/ui/Field"
@@ -10,7 +11,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import ShouldRender from "@/components/helpers/ShouldRender";
 
 const contactForm = z.object({
   name: z.string().min(2, "Must be at least 2 characters long.").max(50, "Must be at most 50 characters long."),
@@ -32,9 +32,6 @@ const ContactForm: FC = () => {
     resolver: zodResolver(contactForm),
   })
 
-
-
-
   async function onSubmit(data: ContactForm) {
     try {
       setLoading(true)
@@ -43,9 +40,11 @@ const ContactForm: FC = () => {
     } catch (err) {
     } finally {
       setLoading(false)
-      context?.showToast( "<h2 class='text-lg mb-1'>Message sent successfully!  🤝</h2>" +
-          "<p class='text-off-white/60'>Thank you for your message! You will be contacted shortly.</p>"
-          , 3000)
+      context?.showToast(
+        "<h2 class='text-lg mb-1'>Message sent successfully!  🤝</h2>" +
+          "<p class='text-off-white/60'>Thank you for your message! You will be contacted shortly.</p>",
+        3000
+      )
     }
   }
 
@@ -98,9 +97,9 @@ const ContactForm: FC = () => {
         size="lg"
       >
         <ShouldRender if={!loading}>
-          <span className="mr-2" >✍️</span>
+          <span className="mr-2">✍️</span>
         </ShouldRender>
-         Send Message
+        Send Message
       </Button>
     </form>
   )
