@@ -13,8 +13,7 @@ html {
 	perspective-origin: 50% 50%;
 }
 .rotate-20:hover {
-	transform: rotateY(0deg) rotateX(0deg);
-	transform: scale(1.05);
+	transform: rotateY(0deg) rotateX(0deg) scale(1.05);
 	transform-style: preserve-3d;
 	transition: all 0.3s ease-in;
 	perspective: 1000px;
@@ -37,13 +36,14 @@ html {
 		--navigation-height: 4.8rem;
 	}
 	html {
-		@apply bg-background  text-off-white;
+		@apply bg-background  text-off-white font-geist-regular font-normal;
 	}
 }
 
+
 @layer utilities {
 	.text-shadow {
-		text-shadow: rgb(0 0 0 / 56%) 0px 3px 12px;
+		text-shadow: rgb(0 0 0 / 56%) 0 3px 12px;
 	}
 
 	.text-gradient {

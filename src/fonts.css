@@ -1,0 +1,23 @@
+
+/* Geist Bold */
+@font-face {
+    font-family: 'Geist Bold';
+    src: url('/static/fonts/geist/Geist-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Geist Medium */
+@font-face {
+    font-family: 'Geist Medium';
+    src: url('/static/fonts/geist/Geist-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Geist Regular */
+@font-face {
+    font-family: 'Geist Regular';
+    src: url('/static/fonts/geist/Geist-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

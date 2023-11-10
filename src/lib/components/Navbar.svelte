@@ -20,7 +20,7 @@
 			: 'border-b border-transparent-white bg-transparent backdrop-blur-[12px]'
 	)}
 >
-	<div class="container flex h-[56px] items-center justify-between py-2">
+	<div class="container flex items-center justify-between py-2">
 		<div class="flex items-center justify-center gap-4">
 			<button
 				aria-label="Sending user to the top of the page"
@@ -33,7 +33,7 @@
 				{#each navigations as { name, section, offset }}
 					<button
 						aria-label={`Link to ${name}`}
-						class="ml-6 text-lg transition-colors hover:text-grey"
+						class="ml-3 text-md transition-colors hover:text-grey"
 					>
 						{name}
 					</button>
