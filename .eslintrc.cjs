@@ -31,7 +31,16 @@ module.exports = {
 			files: ['./src/lib/components/**/*.{svelte,ts}'],
 			rules: {
 				'@typescript-eslint/no-unused-vars': 'off',
-				'tailwindcss/classnames-order': 'off'
+			}
+		},
+		{
+			files: ['./src/lib/components/ui/svelte,ts}'],
+			rules: {
+				'@typescript-eslint/no-unused-vars': 'off',
+				'tailwindcss/classnames-order': 'off',
+				'@tailwindcss/no-custom-classname': 'off',
+				'@tailwindcss/t': 'off'
+
 			}
 		}
 	]
