@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 export { default as Button } from './Button.svelte';
 
 export const buttonVariants = cva(
-	'inline-flex items-center justify-center rounded-md text-sm font-medium font-geist-medium transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
+	'inline-flex items-center justify-center text-sm font-medium rounded-md font-geist-medium transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
 	{
 		variants: {
 			variant: {
@@ -17,9 +17,9 @@ export const buttonVariants = cva(
 				link: 'text-off-white/70 hover:text-off-white transition-colors hover:underline duration-300'
 			},
 			size: {
-				sm: 'text-xs px-3 h-7',
-				md: 'text-sm px-4 h-8',
-				lg: 'text-md px-6 h-10',
+				sm: 'px-3 h-7',
+				md: 'px-4 h-9',
+				lg: 'px-6 h-10',
 				icon_sm: 'p-1',
 				icon_md: 'p-2'
 			}

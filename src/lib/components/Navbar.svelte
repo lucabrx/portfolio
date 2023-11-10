@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { navigations } from '$lib/config/navbar';
+	import { Menu, X } from 'lucide-svelte';
 	import Button from '$lib/components/ui/button/Button.svelte';
 	let isOpen = false;
 
@@ -33,7 +34,7 @@
 				{#each navigations as { name, section, offset }}
 					<button
 						aria-label={`Link to ${name}`}
-						class="ml-3 text-md transition-colors hover:text-grey"
+						class="font-montserrat-regular ml-6 text-lg transition-colors hover:text-grey"
 					>
 						{name}
 					</button>
@@ -45,6 +46,41 @@
 			<Button size="md" aria-label={'Link to contact section'} class="hidden md:block">
 				Contact me
 			</Button>
+
+			<button aria-label="toggle user menu" on:click={() => (isOpen = !isOpen)} class="md:hidden">
+				{#if isOpen}
+					<X className="h-8 w-8" />
+				{:else}
+					<Menu className="h-8 w-8" />
+				{/if}
+			</button>
+
+			{#if isOpen}
+				<div
+					class={cn(
+						'absolute inset-x-0 top-[56px] z-[100] h-[calc(100vh-56px)] w-full bg-background opacity-0 transition-opacity',
+						isOpen ? 'animate-fade-in opacity-100' : 'animate-fade-out opacity-0'
+					)}
+				>
+					<div class="flex flex-col space-y-2 py-4">
+						{#each navigations as { name, section, offset }}
+							<button
+								aria-label={`Sending user to the  ${name}`}
+								class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"
+							>
+								{name}
+							</button>
+						{/each}
+
+						<button
+							aria-label="Sending user to the contact section"
+							class="flex h-navigation-height w-full items-center border-b border-grey-dark px-4 text-lg transition-colors hover:text-grey"
+						>
+							Contact
+						</button>
+					</div>
+				</div>
+			{/if}
 		</div>
 	</div>
 </header>

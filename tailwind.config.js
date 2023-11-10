@@ -12,6 +12,11 @@ module.exports = {
 				xl: '32px'
 			}
 		},
+		fontFamily: {
+			'montserrat-bold': ['"Montserrat Bold"', 'sans-serif'],
+			'montserrat-medium': ['"Montserrat Medium"', 'sans-serif'],
+			'montserrat-regular': ['"Montserrat Regular"', 'sans-serif']
+		},
 		extend: {
 			colors: {
 				transparent: 'transparent',
@@ -46,11 +51,6 @@ module.exports = {
 			boxShadow: {
 				primary: 'rgb(147 51 234 / 50%) 0px 1px 40px',
 				secondary: 'rgb(70 102 241 / 60%) 0px 1px 60px'
-			},
-			fontFamily: {
-				'geist-bold': ['"Geist Bold"', 'sans-serif'],
-				'geist-medium': ['"Geist Medium"', 'sans-serif'],
-				'geist-regular': ['"Geist Regular"', 'sans-serif']
 			},
 			fontWeight: {
 				normal: '400',
